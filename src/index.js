@@ -8,10 +8,12 @@ import { ApolloProvider } from "@apollo/react-hooks"
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { setContext } from 'apollo-link-context'
-
+// https://projectu-back-end-2020.herokuapp.com/graphql
+// https://cakecrusher-projectu-back-end.glitch.me/graphql
+// https://localhost:4000/graphql
 const renderApp = () => {
     const httpLink = createHttpLink({
-        uri: 'http://localhost:4000/',
+        uri: 'https://projectu-back-end-2020.herokuapp.com/graphql',
     })
     
     const authLink = setContext((_, { headers }) => {

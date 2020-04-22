@@ -1,6 +1,11 @@
 Do next (now)
     figure out what the problem is with other browsers
     clean large code
+    figure out how to deploy front end
+
+    figured out how to deploy back end
+    figured out how to upload to github
+
 
     make contact and home page
     check token to tell if you are signed in
