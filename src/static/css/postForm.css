@@ -1,0 +1,252 @@
+.post-form0-container {
+    width: 100%;
+    margin: auto;
+    max-height: 600px;
+    display: grid;
+    grid-template-columns: 100%;
+}
+.post-form0-form {
+    width: 50%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 100%;
+}
+@media only screen and (max-width: 800px) {
+    .post-form0-form {
+        width: 95%;
+    }
+}
+.PF-fields-container {
+    min-width: 75%;
+}
+.PF-input-title {
+    text-align: start;
+}
+.PF-input {
+    margin: 0;
+}
+.PF-search-input-normal {
+    padding-left: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    justify-self: center;
+    font-size: 15px;
+    background-color: white;
+    border: 2px #e5e5e5 solid;
+    width: 100%;
+    color: #282828;
+}
+.PF-search-input {
+    padding-left: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    justify-self: center;
+    font-size: 15px;
+    background-color: white;
+    border: 2px #e5e5e5 solid;
+    width: 100%;
+    color: #282828;
+}
+.PF-display-color {
+    width: 200px;
+    height: 50px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-content: center; */
+    justify-content: center;
+    overflow: hidden;
+}
+.PF-display-part {
+    width: 100%;
+    height: 100%;
+    padding-top: 12px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.PF-input-colors {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 35px);
+    margin-bottom: 10px;
+}
+.color-ins {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    border: 2px solid #e5e5e5;
+}
+.color-ins:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+.PF-skill-fields {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.PF-field-submit {
+    width: 50%;
+    padding: 3px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 50px;
+    background-color: #282828;
+    color: white;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+.PF-skill-wrapper {
+    width: auto;
+    display: grid;
+    grid-template-columns: auto 20px;
+    margin: auto;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+.PF-skill-container {
+    display: grid;
+    margin:auto;
+    background-color: #282828;
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    grid-template-columns: auto auto;
+}
+.PF-skill-name {
+    color: white;
+    border-radius: 10px;
+    justify-self: end;
+    margin-right: 3px;
+}
+.PF-skill-cap {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 3px;
+    margin: auto;
+    margin-left: 3px;
+    color: #282828;
+    font-weight: bold;
+}
+.PF-skill-remove {
+    text-align: center;
+    height: 87%;
+    width: 100%;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 2px #282828 solid;
+    
+}
+.PF-skill-remove:hover {
+    cursor: pointer;
+    background-color: rgb(254,52,77);
+    transition: background-color 0.1s;
+}
+
+.PF-images-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fill, auto); */
+}
+.PF-image-display-container {
+    display: grid;
+    grid-template-columns: auto 20px;
+    margin: 5px;
+}
+.PF-image-display {
+    position: relative;
+    z-index: 1;
+    height: 75px;
+    border: 2px solid #282828;
+    border-right: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.PF-link-container {
+    display: grid;
+    grid-template-columns: auto 20px;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.PF-reference-link {
+    background-color: #282828 ;
+    color: white;
+    margin-right: auto;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.PF-submit {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(52,166,95);
+    color: white;
+    margin: 0;
+    border: 0;
+}
+
+.GCL-input {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30px auto;
+}
+.GCL-type {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    background-color: #282828;
+    display: grid;
+}
+.GCL-image {
+    width: 20px;
+    margin: auto;
+}
+.skills-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.skill-selected {
+    margin: 5px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    border: 2px solid #282828;
+    background-color: #282828;
+    color: white;
+}
+.skill-normal {
+    margin: 5px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    border: 2px solid #282828;
+    background-color: white;
+    color: #282828;
+}
+.skill-selected:hover, .skill-normal:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}

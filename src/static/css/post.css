@@ -1,0 +1,116 @@
+.post-hover:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.25s;
+}
+.post-container {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    border-radius: 3px;
+}
+
+.post-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.header-content{
+    margin-left: 15px;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+}
+.header-icon {
+    width: 15px;
+    margin: 3px;
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+.header-text {
+    margin: auto;
+    font-weight: bold;
+}
+.header-content:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.25s;
+}
+
+.post-title {
+    padding-left: 2%;
+}
+.title-content{
+    margin: 5px;
+    text-align: left;
+}
+
+.post-skills {
+    width: 98%;
+    margin: auto;
+    max-height: 200px;
+    margin-bottom: 3px;
+    overflow: hidden;
+    display: grid;
+    border-radius: 3px;
+    grid-template-columns: 100%;
+}
+.skills-head {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+.skills-img {
+    margin: 5px;
+    width: 30px;
+}
+.skills-info {
+    margin: auto;
+    margin-right: 5px;
+}
+.skills-container {
+    width: 100%;
+    height: minmax(50px,200px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+.skills-ins {
+    color: white;
+    background-color: #282828;
+    margin: 3px;
+    border-radius: 10px;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.post-description {
+    width: 96%;
+    margin: auto;
+    margin-bottom: 10px;
+    max-height: 200px;
+    overflow: hidden;
+    height: minmax(50px, 200px);
+    background-color: white;
+    color: #282828;
+    border-radius: 3px;
+    padding: 1%;
+}
+.post-utilities {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+.utility-ins {
+    width: 25px;
+    margin: 5px;
+    margin-left: 20px;
+}

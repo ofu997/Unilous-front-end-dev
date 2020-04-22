@@ -1,0 +1,130 @@
+.n-notif-container {
+    width: 100%;
+    margin: auto;
+    background-color: aliceblue;
+    color: red;
+    color: #282828;
+    display: auto;
+}
+.n-notif-header {
+    text-align: left;
+    padding-left: 15px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.n-notif-user {
+    padding-left: 15px;
+    color: #282828;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: flex-start;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+.n-notif-user:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.1s;
+}
+.NU-label {
+    margin-right: 10px;
+}
+.NU-icon {
+    width: 15px;
+    margin: auto;
+    margin-right: 5px;
+}
+.NU-username {
+
+}
+.n-notif-content-secondary {
+    opacity: 0.8;
+    display: grid;
+}
+.n-notif-content-secondary {
+    display: grid;
+}
+.n-notif-STJ-container{
+    opacity: 0.9;
+    display: flex;
+    margin-right: 0;
+}
+.n-notif-STJ {
+    white-space: pre-wrap;
+    display: flex;
+    margin-right: 0;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    background-color: #282828;
+    color: white
+}
+.n-notif-message {
+    margin: 5px;
+    margin-left: 0;
+    padding-left: 15px;
+    text-align: start;
+}
+.n-notif-content-primary {
+    /* font-weight: bold; */
+}
+.n-notif-title {
+    text-align: start;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+.n-notif-AoD {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 10px;
+}
+.n-AoD-option {
+    width: 90%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+}
+.n-SH:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+.n-notif-reply {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.n-notif-reply-field {
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+.n-button-container {
+    width: 60%;
+    margin: auto;
+    display: grid;
+    margin-bottom: 10px;
+}
+.n-join-link {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    color: white;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.n-JL-icon {
+    width: 30px;
+    margin: auto;
+
+}

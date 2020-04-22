@@ -1,0 +1,70 @@
+.userPage-container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+@media only screen and (max-width: 800px) {
+    .userPage-container {
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+.UP-posts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+}
+.UP-title-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+}
+.UP-title-icon {
+    width: 25px;
+    margin: auto;
+    margin-right: 10px
+}
+.UP-title {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: start;
+}
+.UP-RL-container {
+    display: flex;
+    flex-direction: column;
+}
+.UP-RL {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    margin-right: auto;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+.UP-RL-icon-container {
+    padding: 4px;
+    padding-left: 12px;
+    padding-right: 5px;
+    display: grid;
+}
+.UP-RL-icon {
+    width: 20px;
+    margin: auto;
+}
+.UP-RL-link {
+    color: #282828;
+    background-color: white;
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 3px;
+}
+.UP-RL-link:hover {
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}

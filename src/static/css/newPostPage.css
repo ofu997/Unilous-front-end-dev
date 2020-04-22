@@ -1,0 +1,343 @@
+.post-page-container {
+    margin: auto;
+    padding-top: 20px;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+@media only screen and (max-width: 800px) {
+    .post-page-container {
+        margin: auto;
+        padding-top: 20px;
+        width: 95%;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+.PP-content {
+    text-align: start;
+}
+.home-options {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 10px;
+}
+.home-option {
+    width: 90%;
+    margin: auto;
+    border-radius: 50px;
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+.home-option:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+.home-option-icon {
+    width: 20px;
+    margin: auto;
+    margin-right: 5px;
+    margin: 10px;
+}
+.home-option-text {
+    margin: auto;
+}
+.PPC-title {
+    text-align: start;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.PPC-sub-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    margin: 20px;
+    margin-top: 0;
+    margin-left: 0;
+}
+.PPC-user-container {
+    color: #282828;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    opacity: 0.7;
+    margin-right: 20px;
+}
+.PPC-user-container:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.1s;
+}
+.PPC-user-icon {
+    width: 15px;
+    padding-right: 5px;
+    margin: auto;
+}
+.PPC-time {
+    opacity: 0.7;
+    margin: 0;
+}
+.PPC-description {
+    margin: 0;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    white-space: pre-wrap;
+}
+.PPC-pictures-container {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+}
+
+.PPC-pictures-highlight {
+    position: relative;
+    right: 0;
+    margin: auto;
+    border: 2px solid;
+    transition: width 0.1s;
+}
+
+.PPC-all-pictures-container {
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.PPC-pictures-instance {
+    margin: 5px;
+    height: 70px;
+    background-color: white;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 2px solid;
+}
+.PPC-links-contaier {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+}
+.PPC-reference-link {
+    color: white;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    opacity: 0.9;
+}
+.PPC-reference-link:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+.PPC-RL-icon {
+    width: 20px;
+    margin: auto;
+    padding-right: 10px;
+}
+
+.PP-side-bar-container {
+    width: 95%;
+    margin-left: 5%;
+
+}
+.PP-side-bar {
+    /* background-color: #ddd; */
+    position: sticky;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #eeeeee;
+}
+.PPC-all-qanda-container {
+
+}
+.PPC-qanda-container {
+    width: 100%;
+    background-color: #eeeef9;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.PPC-qanda-header {
+    color: #282828;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0;
+    margin-right: auto;
+    justify-content: start;
+    padding: 10px;
+    opacity: 0.7;
+}
+.PPC-qanda-header:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.1s;
+}
+.PCC-qanda-content {
+    padding: 10px;
+    padding-top: 0;
+    margin: 0;
+    opacity: 0.9;
+}
+.PCC-answer-toggle {
+    width: 100%;
+    background-color: #dddde9;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0.9;
+}
+.PCC-answer-toggle:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+.PCC-qanda-answer-container {
+    background-color: #dddde9;
+}
+.PP-side-bar {
+    display: flex;
+    
+}
+.PPS-follow-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    margin-right: auto;
+    padding: 5px;
+}
+.PPS-follow-header:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+.PPS-division {
+    width: 100%;
+    height: 2px;
+    grid-column: 1/4;
+    background-color: #eeeeee;
+}
+.PPS-skill {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.PPS-skill-name {
+    justify-self: start;
+    padding-left: 5px;
+    margin: auto;
+}
+.PPS-skill-secondary {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-self: end;
+}
+.PPS-skill-info {
+    justify-self: end;
+    opacity: 0.8;
+    margin: auto;
+}
+.PPS-button-exit {
+    justify-self: end;
+    padding: 4px;
+    padding-left: 24.5px;
+    padding-right: 24.5px;
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 20px;
+    white-space: pre-wrap;
+    color: rgb(254,52,77);
+}
+.PPS-button {
+    justify-self: end;
+    border: 2px solid #282828;
+    padding: 2px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 20px;
+    white-space: pre-wrap;
+}
+.PPS-button-disabled {
+    justify-self: end;
+    border: 2px solid #282828;
+    padding: 2px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 20px;
+    white-space: pre-wrap;
+    opacity: 0.5;
+}
+.PPS-button:hover, .PPS-button-exit:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+.PPS-title {
+    margin-left: 5px;
+    margin-bottom: 10px
+}
+.PPS-skill-form {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 100%;
+}
+.PPS-input-container {
+    display: grid;
+}
+.PPS-input {
+    padding-left: 5px;
+    width: 85%;
+    height: 100px;
+    border: 2px solid #eeeeee;
+    margin: auto;
+    border-radius: 3px;
+    margin-bottom: 10px
+}
+.PPC-submit-container {
+    display: grid;
+    justify-content: end;
+}
+.PPC-team-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 10px
+}
+.PPC-team-member {
+    color: #282828;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    opacity: 0.7;
+    margin-right: 20px;
+}
+.qanda-text {
+    opacity: 0.8;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.team-info {
+    opacity: 0.8;
+}

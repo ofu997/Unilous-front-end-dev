@@ -1,0 +1,35 @@
+.form-info-container {
+    position: relative;
+    width: 100%;
+}
+.info-header-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+}
+.info-title-text {
+    text-align: start;
+    margin: 5px;
+    margin-left: 0;
+    margin-right: 10px;
+}
+.info-icon-container {
+    width: 100%;
+    display: grid;
+    justify-content: start;
+}
+.info-icon {
+    width: 20px;
+    margin: auto;
+    opacity: 0.7;
+}
+.info-icon:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.1s;
+}
+.info-content {
+    width: 100%;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}

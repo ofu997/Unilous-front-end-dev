@@ -1,0 +1,40 @@
+.form-container-expand {
+    position: fixed;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    bottom: 0px;
+    right: 0px;
+    border-top-left-radius: 100px;
+    display: grid;
+}
+.form-container-qc {
+    position: fixed;
+    z-index: 2;
+    bottom: 0px;
+    right: 0px;
+    border-top-left-radius: 3px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+.form-contract {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    border-bottom-right-radius: 75px;
+    display: grid;
+}
+.form-expand-icon {
+    width: 40px;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin: auto;
+}
+.form-shrink-icon {
+    width: 45px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+}

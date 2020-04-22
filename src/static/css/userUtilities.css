@@ -1,0 +1,183 @@
+.userUtil-info {
+    width: 100%;
+    color: #282828;
+}
+
+.simple-post-banner {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+}
+
+.userUtil-notif {
+    width: 100%;
+    min-height: 115px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 15px;
+}
+.notification-container {
+    color: #282828;
+    background-color: white;
+    width: 95%;
+    border-radius: 3px;
+    margin: auto;
+    display: grid;
+    overflow: hidden;
+}
+.notif-container {
+    text-align: left;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+.notif-sender{
+    text-align: left;
+
+}
+.notif-message {
+    padding-left: 20px;
+}
+.notif-accepted {
+    border-radius: 20px;
+    border: 3px green solid;
+}
+.notif-declined {
+    border-radius: 20px;
+    border: 3px red solid;
+}
+.notification-option {
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding-top: 3px;
+    /* padding-bottom: 3px; */
+}
+.standard-hover:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.25s;
+}
+.N-answer-input {
+    width: 95%;
+    height: 100px;
+    border: 0;
+    border-radius: 3px;
+    padding-left: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.decide {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.option {
+    border-radius: 3px;
+    color: white
+}
+.email {
+    width: 100%;
+    color: green;
+}
+.skilll {
+    padding: 3px;
+    background-color: #282828;
+    color: white;
+    
+}
+
+.notif-filter-container {
+    justify-self: start;
+    width: auto;
+    margin-left: 15px;
+    height: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+}
+.NF-creator-container {
+    height: 20px;
+    justify-self: start;
+    display: grid;
+    grid-template-columns: auto 85px;
+    justify-content: center;
+}
+.messages-option {
+    background-color: #8b8b8b;
+    color: white;
+}
+.accepted-option {
+    background-color: rgb(52,166,95);
+    color: white;
+}
+.declined-option {
+    background-color: rgb(254,52,77);
+    color: white;
+}
+.pending-option {
+    background-color: rgb(226,184,59);
+    color: white;
+}
+.NF-label {
+    margin: 5px;
+}
+.NF-option-container {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    width: 100%;
+    background-color: white;
+    border: 2px #dfdfdf solid;
+    border-radius: 3px;
+    color: #282828;
+}
+.NF-option {
+    width: 75px;
+    margin: auto;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.NF-splitter {
+    width: 100%;
+    height: 2px;
+    background-color: #dfdfdf;
+}
+.NF-option:hover {
+    cursor: pointer;
+    background-color: #f5f5f5;
+    color: #282828;
+    transition: background-color 0.1s, color 0.1s;
+}
+.NF-DD-option {
+    margin: auto;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.NF-DD-option:hover {
+    cursor: pointer;
+    background-color: #f5f5f5;
+    color: #282828;
+    transition: background-color 0.1s, color 0.1s;
+}
+.notification-CL-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgb(52,166,95);
+}
+.notification-sucess-icon {
+    width: 30px;
+    margin: auto;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-right: 0px;
+}
+.notification-cl {
+    margin: auto;
+    margin-left: 0px;
+}

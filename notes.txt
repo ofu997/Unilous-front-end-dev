@@ -1,0 +1,169 @@
+Do next (now)
+    figure out what the problem is with other browsers
+    clean large code
+
+    make contact and home page
+    check token to tell if you are signed in
+
+    use apply middleware to server
+    Buy domain
+    start page in heroku
+    make contact page
+    make landing page as a post
+    
+    redesign notifications
+    imrove notification search
+    make sure that small posts can be deleted
+
+    add notification highlight
+    resolve what is wrong with the search query
+
+    add form rules
+        add onError with mutations
+        AuthenticationError, ForbiddenError, UserInputError 
+    
+    add event search button for results
+        optimize search
+    improve loading component
+        allow for dark and light option
+        have it be adaptable in size
+
+    arrange nav bar for mobile
+
+    add teams to post page
+    error when accepting a join request
+
+    implement team functionality
+        do it by replacing a number for skillFill with an ID list
+    make sure the site works on chrome
+    
+    implement a way to have the forms fit in the form container and the form SB
+    figure out how to keep forms consistent for mobile and desktop
+
+    add qanda to PostPage
+    add sidebar to PostPage
+    
+    implement alertNotif
+    create new post page
+        create new post proposition
+
+    implement all InputHeaders
+    add notification banner under nav
+        will be reducer and hook
+    
+    add field info button
+        will be component
+
+    maybe include description to filter
+    eliminate user search
+
+    have post filter work correctly 
+    include recommendations as recommendations
+
+    make a universal website field and output in hooks to be used wherever websites are shown
+    
+    add filter to notifications
+    and the new group link for post proposals
+
+    add the QandA to frontend
+
+    clean user UI
+    make sure the notifications have the new added contactLink
+    get the search to work correctly
+
+    add task manager platform for posts as a field and the UI that accompanies it in notifs
+    fix navbar
+        get searchbar bsesides icon and rework the signin and sign up button
+
+    add remove saved post functionality
+
+    figure out how to deal with the _id bug in LIST_OF_POSTS
+
+    add save post functionality
+    
+    need to add veryfication to the fields so that they only have good inputs
+
+    after creating the post route to the post itself (withRouter)
+
+    figure out how to specifically remove skills using index (pop) while updating skillProposition
+    finish adding imageLinks and referenceLinks
+
+    make PostSmallList more flexible
+    create new post list query backend and add it to UserInfo
+    the currentUser posts is not loaded from the postPage
+    the problem only rises when postpage is activated
+
+    refine notification and make it functional
+    separate the small post onto its own component
+    make sure all necessary content within the user bar is loaded
+    make sure only logged in can post
+    
+    the currentUser is not being updated when signing in
+    fix up userNav 
+    improve userNav design
+    enforce logged in for mutations
+    work on new bar fill design
+    none of the functions are updating in PostSkills
+    find a way to reset proposed help after submitting form
+    fix image not updating
+    finish creating PostPage and UserPage skeleton
+    add UI for user stuff
+    add post create functionality
+    then add all mutations
+    then deploy
+
+Do Next
+    finish new post model UI
+    create post
+        improve the post model given the errors with posts
+        map post reducer data to post
+        make the filtering happen from the query
+
+    get pie nav to behave and look as intended
+        modify the model with the right fields
+        display the information  on the pieNav
+        display the parent information under the pie
+    pass the user the rest of the fields and make sure they function as intended
+    add the user features
+        add what is supposed to be in the user content boxes
+slices in pie
+slice form (SliceForm.js)
+    make sure that when contracted it fits niely around the title
+
+
+Red: rgb(254,52,77)
+Green: rgb(52,166,95)
+Yellow: rgb(226,184,59)
+Colors: rgb(44,52,59) rgb(15,138,95) rgb(133,156,177) rgb(224,52,77) rgb(245,165,0) rgb(1,152,173) rgb(16,79,37) rgb(152,183,49) rgb(113,112,255)
+
+Errors & Warnings
+    Render methods should be a pure function of props and state; triggering nested component updates from render is not allowed. If necessary, trigger nested updates in componentDidUpdate.
+        to remove this error is to place the PieNav within the Slice page component
+            the reason is because to reload the currentSlice when the broweser back arrow is hit the NavBar is not changed only the Slice therefore the Slice changes the currentSlice with again reloads the NavBar
+    MongoNetworkError: failed to connect to server [cluster0-shard-00-00-dlwek.mongodb.net:27017] on first connect [MongoNetworkError: connection 5 to cluster0-shard-00-00-dlwek.mongodb.net:27017 closed]
+        to remove this error make sure the ip addresses whitelist are configured correctly on the database service
+
+Future notes
+    before you lose your mind (if you can afford it) start from 0
+    reduce to smaller components untill it works as intended
+    if something has been triple checked and it does not make sense dont be spiritual and assume an impossible problem instead console log every detail to ensure it all as expected
+    if css is buggy it might have to do with the rendering of the page in my case it had to do with the apollo hooks loading
+    make sure to consider all the things a variable could be referring to in an error message
+    if something is not updating properly it likely can be fixed with useEffect
+
+
+
+
+BG = 5e59c9138d6fde662cc28a3d
+    Posts
+    5e59cdad8d6fde662cc28a47
+    Notif
+    do nothing = 5e59d15362b3d759003619b0
+    acc = 5e59d0cc62b3d759003619af
+    dec = 5e59d17362b3d759003619b1
+    
+SN = 5e59c9be8d6fde662cc28a3e
+    Posts
+    5e59cb6d8d6fde662cc28a43
+    5e59cc6e8d6fde662cc28a45
+
