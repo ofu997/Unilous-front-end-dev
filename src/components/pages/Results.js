@@ -22,13 +22,15 @@ const Results = (props) => {
     const currentIds = props.posts ? props.posts.map(p => p._id) : []
     const [scrollAtBottom, setScrollAtBottom] = useState(false)
     const decodedSearch = decodeURIComponent(props.query)
-    const {data} = useQuery(SEARCH_POSTS,
-        {variables: {
+    const {data} = useQuery(SEARCH_POSTS, {
+        variables: {
             filterString: decodedSearch,
             postIds: currentIds,
             eventQuery: props.eventSearch,
-        }}
-    )
+        }
+    })
+    console.log(decodedSearch)
+    console.log(data)
     if ((window.innerHeight + window.scrollY) > (document.body.offsetHeight - 400) && !scrollAtBottom) {
         setScrollAtBottom(true)
     }

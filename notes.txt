@@ -1,8 +1,13 @@
 Do next (now)
-    figure out what the problem is with other browsers
+    solve error where the site does not recognize other routes
+    fix font
+    add report system
+        by disguising messages to my official account
+    make it so that the back end is safer
     clean large code
-    figure out how to deploy front end
 
+    figure out what the problem is with other browsers
+    figure out how to deploy front end
     figured out how to deploy back end
     figured out how to upload to github
 

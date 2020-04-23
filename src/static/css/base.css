@@ -65,9 +65,10 @@ h1,h2,h3,h4,h5 {
     grid-template-columns: 100%;
 }
 .loading-logo-l {
-    width: 30%;
+    width: 150px;
     margin: auto;
     margin-top: 8%;
+    margin-bottom: 10px;
     /* margin-top: 40vh; */
     transform-origin: 48.1% 47.8%;
     transform: rotate(0deg);

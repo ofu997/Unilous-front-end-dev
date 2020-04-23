@@ -25,7 +25,7 @@ const Contact = (props) => {
                 <div className="contact-container">
                     <Link to="/user/Mikhail" className="contact-header neutralize-link">
                         <img src={logoIcon} className="CH-icon" alt="ProjectU" />
-                        <h3 className="CH-name">Mikhail</h3>
+                        <h3 className="CH-name">Umyarov Mikhail Vladimirovich</h3>
                     </Link>
                     <img src="https://i.imgur.com/ew81eQe.png" className="profile-image" alt="profile" />
                     <div className="contact-info-container">
