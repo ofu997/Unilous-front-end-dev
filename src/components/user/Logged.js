@@ -26,11 +26,12 @@ const Logged = (props) => {
         variables: {username: localStorage.getItem('username')}
     })
     const userQueryConditions = () => {
-        const query = userQuery.data.findUser
+        const query = userQuery.data
         const reducer = props.currentUser
         if (!query) { return null }
+        if (!query.findUser) { return null }
         if (reducer) {
-            if (query.username === reducer.username) { return null }
+            if (query.findUser.username === reducer.username) { return null }
         }
         return query
     }

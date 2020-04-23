@@ -22,15 +22,15 @@ const Results = (props) => {
     const currentIds = props.posts ? props.posts.map(p => p._id) : []
     const [scrollAtBottom, setScrollAtBottom] = useState(false)
     const decodedSearch = decodeURIComponent(props.query)
-    const {data} = useQuery(SEARCH_POSTS, {
+    // const decodedSearch = 'bother'
+    const SPQuery = useQuery(SEARCH_POSTS, {
         variables: {
             filterString: decodedSearch,
             postIds: currentIds,
             eventQuery: props.eventSearch,
         }
     })
-    console.log(decodedSearch)
-    console.log(data)
+    console.log(SPQuery)
     if ((window.innerHeight + window.scrollY) > (document.body.offsetHeight - 400) && !scrollAtBottom) {
         setScrollAtBottom(true)
     }
@@ -51,8 +51,9 @@ const Results = (props) => {
         if (!scrollAtBottom) return false
         if (!query) return false
         if (!query.searchPosts) return false
-        if (!reducer) return true
-        if (query.searchPosts.length !== reducer.length) return true
+        if (!reducer) {
+            return true
+        }
         const queryTitles = query.searchPosts.map(i => i.title)
         const reducerTitles = reducer.map(i => i.title)
         for (const title of queryTitles) {
@@ -62,21 +63,24 @@ const Results = (props) => {
         }
         return false
     }
-    const postsSearched = postChangeConditions(data, props.posts) ?
-        data.searchPosts : null
-
+    const postsSearched = postChangeConditions(SPQuery.data, props.posts) ?
+        SPQuery.data.searchPosts : null
     useEffect(() => {
         if (postsSearched && !props.posts) {
-            props.addPosts(data.searchPosts)
+            console.log('changed 1')
+            props.addPosts(SPQuery.data.searchPosts)
+            setScrollAtBottom(false)
         }
         if (postsSearched && props.posts) {
             if (postsSearched.length > 0) {
                 if (!props.posts.map(p => p._id).includes(postsSearched[0]._id)){
-                    props.addPosts(data.searchPosts)
+                    console.log('changed 2')
+                    props.addPosts(SPQuery.data.searchPosts)
+                    setScrollAtBottom(false)
                 }
             }
         }
-    }, [data, props.addPosts, props, postsSearched])
+    }, [SPQuery, props.addPosts, props, postsSearched])
     if (!props.posts) {
         return (
             <div>

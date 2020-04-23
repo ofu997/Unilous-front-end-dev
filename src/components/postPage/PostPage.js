@@ -71,19 +71,21 @@ const PostPage = (props) => {
         variables: {title: decodeURIComponent(props.postTitle)}
     })
     const qandaChangeConditions = () => {
-        const query = qandaQuery.data.searchAnsweredQToPost
+        const query = qandaQuery.data
         const reducer = currentPost
         if (!query) return null
+        if (!query.searchAnsweredQToPost) return null
         if (!reducer) return null
         if (reducer.qanda) return null
-        return query
+        return query.searchAnsweredQToPost
     }
     const postChangeConditions = () => {
-        const query = postQuery.data.findPost
+        const query = postQuery.data
         const reducer = currentPost
         if (!query) return null
+        if (!query.findPost) return null
         if (reducer) return null
-        return query
+        return query.findPost
     }
     const qanda = qandaChangeConditions()
     const post = postChangeConditions()

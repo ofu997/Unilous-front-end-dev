@@ -1,10 +1,12 @@
 Do next (now)
-    solve error where the site does not recognize other routes
     fix font
     add report system
         by disguising messages to my official account
     make it so that the back end is safer
     clean large code
+
+    solve error where the site does not recognize other routes
+
 
     figure out what the problem is with other browsers
     figure out how to deploy front end

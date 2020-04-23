@@ -125,6 +125,7 @@ export const SEARCH_POSTS = gql`
       title
       user {
         username
+        _id
       }
       skillNames
       skillCapacities
