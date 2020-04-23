@@ -17,6 +17,7 @@ import './static/css/newFormContainer.css'
 import { FIND_USER, PENDING_NOTIFS } from './schemas'
 
 const App = (props) => {
+  localStorage.clear()
   const [query, setQuery] = useState('')
 
   const onQueryChange = (event) => {
@@ -60,10 +61,10 @@ const App = (props) => {
         <NavBar query={query} onQueryChange={onQueryChange} />
         <SubNav />
         <Route exact path="/" render={() => <PostPage home={true} postTitle="This will be the home page post for ProjectU" /> } />
-        <Route path="/contact/" render={() => <Contact />} />
+        <Route exact path="/contact/" render={() => <Contact />} />
         <Route exact path="/browse/" render={() => <Results query="" /> } />
         <Route path="/browse/:query" render={({match}) => <Results query={match.params.query} /> } />
-        <Route path="/post-form/" render={() => <PostFormPage /> } />
+        <Route exact path="/post-form/" render={() => <PostFormPage /> } />
         <Route path="/post/:title" render={({match}) => <PostPage postTitle={match.params.title} /> } />
         <Route path="/user/:username" render={({match}) => <UserPage userUsername={match.params.username} /> } />
       </Router>

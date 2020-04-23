@@ -207,11 +207,11 @@ const PostPage = (props) => {
         if (props.home) {
             return (
                 <div className="home-options">
-                    <Link to="/browse/" className="home-option neutralize-link" style={{backgroundColor: 'rgb(52,166,95)'}}>
+                    <Link to="/browse/" className="home-option neutralize-link" style={{backgroundColor: '#282828'}}>
                         <img src={searchIcon} className="home-option-icon" alt="search" />
                         <h3 className="home-option-text">start browsing</h3>
                     </Link>
-                    <Link to="/post-form/" className="home-option neutralize-link" style={{backgroundColor: '#5370b5'}}>
+                    <Link to="/post-form/" className="home-option neutralize-link" style={{backgroundColor: 'rgb(52,166,95)'}}>
                         <img src={plusIcon} className="home-option-icon" alt="add" />
                         <h3 className="home-option-text">add project</h3>
                     </Link>

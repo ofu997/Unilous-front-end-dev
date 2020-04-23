@@ -22,7 +22,6 @@ const Results = (props) => {
     const currentIds = props.posts ? props.posts.map(p => p._id) : []
     const [scrollAtBottom, setScrollAtBottom] = useState(false)
     const decodedSearch = decodeURIComponent(props.query)
-    // const decodedSearch = 'bother'
     const SPQuery = useQuery(SEARCH_POSTS, {
         variables: {
             filterString: decodedSearch,
@@ -30,7 +29,6 @@ const Results = (props) => {
             eventQuery: props.eventSearch,
         }
     })
-    console.log(SPQuery)
     if ((window.innerHeight + window.scrollY) > (document.body.offsetHeight - 400) && !scrollAtBottom) {
         setScrollAtBottom(true)
     }
@@ -67,14 +65,12 @@ const Results = (props) => {
         SPQuery.data.searchPosts : null
     useEffect(() => {
         if (postsSearched && !props.posts) {
-            console.log('changed 1')
             props.addPosts(SPQuery.data.searchPosts)
             setScrollAtBottom(false)
         }
         if (postsSearched && props.posts) {
             if (postsSearched.length > 0) {
                 if (!props.posts.map(p => p._id).includes(postsSearched[0]._id)){
-                    console.log('changed 2')
                     props.addPosts(SPQuery.data.searchPosts)
                     setScrollAtBottom(false)
                 }
@@ -137,9 +133,7 @@ const Results = (props) => {
             <h3 className="event-text">{e.name}</h3>
         </div>
     )
-    // const resultsTitle = eventsList.map(e => e.name === props.eventSearch ?
-    //     <img src={e.iconB} className="title-image" alt={e.name} /> : null
-    // )
+    
     const eventsContainerClass = props.eventSearch ? 'EC-active' : null
     return (
         <div className="home-wrapper">

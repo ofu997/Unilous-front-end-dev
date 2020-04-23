@@ -14,10 +14,10 @@ import { palletteGenerator, useField, triggerAlert } from '../../hooks/index'
 const UserPage = (props) => {
     const [currentUser, setCurrentUser] = useState(null)
     const message = useField('text')
+    const decodedUser = decodeURIComponent(props.userUsername)
     const userQuery = useQuery(FIND_USER, {
-      variables: {username: decodeURIComponent(props.userUsername)}
+      variables: {username: decodedUser}
     })
-
     const onError = (e) => {
       const eMessage = e.message
       if (eMessage.includes('Path `message` (')) {
@@ -50,7 +50,7 @@ const UserPage = (props) => {
       const reducer = currentUser
       if (!query) return null
       if (!query.findUser) return null
-      if (!reducer) return query.findUser
+      if (!reducer || reducer.username !== query.username) return query.findUser
       return null
     }
 

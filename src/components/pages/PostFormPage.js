@@ -45,7 +45,6 @@ let PostFormPage = (props) => {
             return null
         }
         if (message.includes('duplicate description')) {
-            console.log('duplicate Des')
             triggerAlert('warning', `description$: description is not unique. Description must be unique`, props.setAlert, props.resetAlert)
             return null
         }
@@ -58,7 +57,6 @@ let PostFormPage = (props) => {
             return null
         }
         if (message.includes('duplicate contactLink')) {
-            console.log('duplicate CL')
             triggerAlert('warning', `group/contact link$: ${groupContactLink.fields.value} is not unique. Group/contact link must be unique`, props.setAlert, props.resetAlert)
             return null
         }
@@ -89,7 +87,7 @@ let PostFormPage = (props) => {
         }
         const postCreated = await createPost({
             variables: {
-                title: cleanedTitle,
+                title: cleanedTitle.join(' '),
                 user: props.currentUser._id,
                 skillNames: skillNameList,
                 skillCapacities: skillCapList,
@@ -102,7 +100,6 @@ let PostFormPage = (props) => {
             }
         })
         if (postCreated) {
-            console.log(postCreated)
             props.setSkillProposition(null)
             title.reset()
             description.reset()
@@ -128,6 +125,8 @@ let PostFormPage = (props) => {
             setSkillCapList(skillCapList.concat(Number(skillCapacity)))
             setSkillCapacity('')
             props.setSkillProposition(props.skillProposition.concat(0))
+            setSkillProposition(null)
+            setSkillSelected(null)
         }
     }
     const removeSkill = (ind) => {
@@ -199,10 +198,9 @@ let PostFormPage = (props) => {
             return <h4 className="PF-input-title" style={{opacity: 0.7}}>must add skill first</h4>
         }
 
-        const handleSkillSelect = (i, ) => {
+        const handleSkillSelect = (i) => {
             const skillArray = Array(skillNameList.length).fill(0)
             skillArray[i] = 1
-            console.log(skillArray)
             setSkillProposition(skillArray)
             setSkillSelected(skillNameList[i])
         }
@@ -257,9 +255,13 @@ let PostFormPage = (props) => {
             </React.Fragment>
         )
     }
+    const signInWarning = props.token ? null : (
+        <h3 className="warning-container">must be signed in to add post</h3>
+    )
     return (
         <div className="post-form0-container">
             <div className="navbar-height" />
+            {signInWarning}
             <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="post-form0-form">
                     <h1 className="pp-form-title" style={{textAlign: 'start', marginLeft: 0}}>create post</h1>

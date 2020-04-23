@@ -163,6 +163,7 @@ export const LIST_OF_POSTS = gql`
       title
       user{
         username
+        _id
       }
       color
       skillFills
@@ -322,10 +323,12 @@ export const ACCEPT_NOTIFICATION = gql`
       userFrom {
         username
         email
+        _id
       }
       userTo {
         username
         email
+        _id
       }
       message
       post{
@@ -334,6 +337,7 @@ export const ACCEPT_NOTIFICATION = gql`
         skillNames
         skillFills
         skillCapacities
+        _id
       }
       proposedContribution
       accepted
@@ -348,10 +352,12 @@ export const DECLINE_NOTIFICATION = gql`
       userFrom {
         username
         email
+        _id
       }
       userTo {
         username
         email
+        _id
       }
       message
       post{
@@ -360,6 +366,7 @@ export const DECLINE_NOTIFICATION = gql`
         skillNames
         skillFills
         skillCapacities
+        _id
       }
       proposedContribution
       accepted

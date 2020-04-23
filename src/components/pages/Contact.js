@@ -31,7 +31,7 @@ const Contact = (props) => {
                     <div className="contact-info-container">
                         <div className="contact-info" style={{backgroundColor: '#f6f6f9'}}><strong>postion:</strong> UI/UX editor</div>
                         <div className="contact-info"><strong>email:</strong> silverusdragonitos@yandex.ru</div>
-                        <div className="contact-info"><strong>phone:</strong> +7 952 156 96 49</div>
+                        <div className="contact-info"><strong>phone:</strong> +7 952-156-96-49</div>
                     </div>
                 </div>
             </div>

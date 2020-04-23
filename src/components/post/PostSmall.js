@@ -7,6 +7,8 @@ import { DELETE_POST, REMOVE_SAVED_POST } from '../../schemas'
 import userIcon from '../../static/svg/userB.svg'
 import { setCurrentUserPosts, setCurrentUserSP } from '../../reducers/currentUser'
 import { setPostsForUFP } from '../../reducers/userForPage'
+import { setAlert, resetAlert } from '../../reducers/alertNotif'
+import { triggerAlert } from '../../hooks/index'
 
 const PostSmall = (props) => {
     const handleError = (e) => {
@@ -19,18 +21,17 @@ const PostSmall = (props) => {
         onError: handleError
     })
     const p = props.post
+    const user = props.post.user ? props.post.user.username : props.user
     const pallette = palletteGenerator(p.color).colorPallette
-    const handleRemove = async () => {
-        console.log(props.post._id)
-        const result = await deletePostMutation({
-            variables: {postId: props.post._id}
-        })
-        if (result) {
-            props.setCurrentUserPosts(props.currentUser.posts.filter(p => p._id !== props.post._id))
-            props.setPostsForUFP(props.userForPage.posts.filter(p => p._id !== props.post._id))
-            
-        }
-    }
+    // const handleRemove = async () => {
+    //     const result = await deletePostMutation({
+    //         variables: {postId: props.post._id}
+    //     })
+    //     if (result) {
+    //         props.setCurrentUserPosts(props.currentUser.posts.filter(p => p._id !== props.post._id))
+    //         triggerAlert('danger', `deleted $: deleted post '${p.title}'`, props.setAlert, props.resetAlert)
+    //     }
+    // }
     const handleSaveRemove = async () => {
         const result = await removeSPMutation({
             variables: {
@@ -41,7 +42,7 @@ const PostSmall = (props) => {
         if (result) {
             const newSavedPosts = props.currentUser.savedPosts.filter(post => post._id !== p._id)
             props.setCurrentUserSP(newSavedPosts)
-            console.log('saved post removed')
+            triggerAlert('danger', `unfollowed$: unfollowed post '${p.title}'`, props.setAlert, props.resetAlert)
         }
     }
     
@@ -51,9 +52,9 @@ const PostSmall = (props) => {
                 <div className="post-color-indicator" style={{backgroundColor: pallette.color}} />
                 <div className="post-container">
                     <div className="post-header">
-                        <Link to={`/user/${encodeURIComponent(p.user.username)}`} className="PH-user neutralize-link ">
+                        <Link to={`/user/${encodeURIComponent(user.username)}`} className="PH-user neutralize-link ">
                             <img className="PHU-icon" src={userIcon} alt="user" />
-                            <div>{p.user.username}</div>
+                            <div>{user}</div>
                         </Link>
                     </div>
                     <Link to={`/post/${encodeURIComponent(p.title)}`} className="neutralize-link"><h3 className="post-title" style={{marginBottom: '7px'}}>{p.title}</h3></Link>
@@ -64,20 +65,21 @@ const PostSmall = (props) => {
     }
 
     if (props.currentUser) {
-        if (p.user === props.currentUser.username) {
+        if (user === props.currentUser.username) {
+            console.log(user)
             return (
                 <div className="post-wrapper-sm">
                     <div className="post-color-indicator" style={{backgroundColor: pallette.color}} />
                     <div className="post-container">
                         <div className="post-header">
-                            <Link to={`/user/${encodeURIComponent(p.user)}`} className="PH-user neutralize-link ">
+                            <Link to={`/user/${encodeURIComponent(user)}`} className="PH-user neutralize-link ">
                                 <img className="PHU-icon" src={userIcon} alt="user" />
-                                <div>{p.user}</div>
+                                <div>{user}</div>
                             </Link>
                         </div>
                         <Link to={`/post/${encodeURIComponent(p.title)}`} className="neutralize-link"><h3 className="post-title" style={{marginBottom: '7px'}}>{p.title}</h3></Link>
                     </div>
-                    <div onClick={() => handleRemove()} className="post-sm-remove">x</div>
+                    {/* <div onClick={() => handleRemove()} className="post-sm-remove">x</div> */}
                 </div>
             )
         }
@@ -90,7 +92,7 @@ const PostSmall = (props) => {
                 <div className="post-header">
                     <Link to={`/user/${encodeURIComponent(props.user)}`} className="PH-user neutralize-link ">
                         <img className="PHU-icon" src={userIcon} alt="user" />
-                        <div>{props.user}</div>
+                        <div>{user}</div>
                     </Link>
                 </div>
                 <Link to={`/post/${encodeURIComponent(p.title)}`} className="neutralize-link"><h3 className="post-title" style={{marginBottom: '7px'}}>{p.title}</h3></Link>
@@ -107,5 +109,5 @@ const mapStateToProps = (state) => {
 }
 export default connect(
     mapStateToProps,
-    { setCurrentUserPosts, setCurrentUserSP, setPostsForUFP }
+    { setCurrentUserPosts, setCurrentUserSP, setPostsForUFP, setAlert, resetAlert }
 )(PostSmall)

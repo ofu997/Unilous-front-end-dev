@@ -11,10 +11,12 @@ const PostSmallList = (props) => {
         variables: {id_list: props.posts.map(p => p._id)}
     })
     const queryConditions = () => {
-        const query = postListQuery.data.getListOfPosts
+        const query = postListQuery.data
         const reducer = posts
         if (!query) return null
-        if (!reducer) return query
+        if (!query.getListOfPosts) return null
+        if (!query.getListOfPosts.length) return query.getListOfPosts
+        if (!reducer || !reducer.length || reducer[0]._id !== query.getListOfPosts[0]._id) return query.getListOfPosts
         return null
     }
       
