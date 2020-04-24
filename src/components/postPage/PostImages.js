@@ -28,9 +28,9 @@ const PostImages = (props) => {
     }
     else {
         const imageOptions = images.map(i => i === imgShown ?
-            <img key={`img${i}`} onClick={() => setToImgShown(i)} className="PPC-pictures-instance" loading="lazy" style={{borderColor: props.color}} src={i} alt="pic" />
+            <img key={`img${i}`} onClick={() => setToImgShown(i)} className="PPC-pictures-instance" style={{borderColor: props.color}} src={i} alt="pic" />
             :
-            <img key={`img${i}`} onClick={() => setToImgShown(i)} className="PPC-pictures-instance" loading="lazy" style={{borderColor: '#282828'}} src={i} alt="pic" />
+            <img key={`img${i}`} onClick={() => setToImgShown(i)} className="PPC-pictures-instance" style={{borderColor: '#282828'}} src={i} alt="pic" />
         )
         
         return (
