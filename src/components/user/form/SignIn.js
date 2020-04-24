@@ -27,7 +27,6 @@ const SignIn = (props) => {
                 password: password.fields.value
             }
         })
-
         if (result) {
             if (props.changeMenuItem) {
                 props.changeMenuItem(null)
@@ -38,7 +37,7 @@ const SignIn = (props) => {
             localStorage.setItem('token', token)
             localStorage.setItem('username', username.fields.value)
             props.setToken(token)
-            window.location.reload()
+            // window.location.reload()
         }
     }
 

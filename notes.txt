@@ -1,12 +1,12 @@
 Do next (now)
     implement delete functionality
         make it so that it does not cause problems with notifs
-    add suggestions top skills in postFormPage
     fix font
     add report system
         by disguising messages to my official account
     make it so that the back end is safer
     clean large code
+    add suggestions top skills in postFormPage
     create home page
     set up the back end
         fresh db

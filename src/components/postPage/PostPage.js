@@ -60,7 +60,6 @@ const PostPage = (props) => {
         if (!props.token) {
             triggerAlert('warning', 'sign in$: must be signed in to perform this action', props.setAlert, props.resetAlert)
         }
-        console.log(props.currentUser._id, currentPost._id)
         const result = await followMutation({
             variables: {
                 user: props.currentUser._id,
@@ -95,8 +94,6 @@ const PostPage = (props) => {
         if (!query) return null
         if (!query.findPost) return null
         if (reducer) {
-            console.log(reducer.title)
-            console.log(query.findPost.title)
             if (reducer.title === query.findPost.title) return null
         }
         return query.findPost

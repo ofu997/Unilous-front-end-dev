@@ -25,12 +25,13 @@ const App = (props) => {
   if (localStorage.getItem('token') && props.token === null) {
     props.setToken(localStorage.getItem('token'))
   }
-  const currentUserId = props.currentUser ? props.currentUser._id : null
+  const currentUserId = props.currentUser ? props.currentUser._id : 'thisisfake'
   const pendingNotifsQuery = useQuery(PENDING_NOTIFS, {
     variables:  {userId: currentUserId}
   })
+  const currentUserUN = localStorage.getItem('username') ? localStorage.getItem('username') : 'thisisfake'
   const userQuery = useQuery(FIND_USER, {
-    variables: {username: localStorage.getItem('username')}
+    variables: {username: currentUserUN}
   })
   const pendingNotifsConditions = () => {
     if (!pendingNotifsQuery.data) return null
