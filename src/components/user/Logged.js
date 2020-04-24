@@ -34,7 +34,7 @@ const Logged = (props) => {
         if (reducer) {
             if (query.findUser.username === reducer.username) { return null }
         }
-        return query
+        return query.findUser
     }
     const userResult = userQueryConditions()
 
@@ -81,7 +81,6 @@ const Logged = (props) => {
             setShowUtilities(changeTo)
         }
     }
-
     const usernameIcon = props.currentUser.username.substr(0, 1).toUpperCase()
 
     const iconToShow = showUtilities ?

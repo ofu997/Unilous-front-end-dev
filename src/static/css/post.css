@@ -96,7 +96,6 @@
     margin-bottom: 10px;
     max-height: 200px;
     overflow: hidden;
-    height: minmax(50px, 200px);
     background-color: white;
     color: #282828;
     border-radius: 3px;
