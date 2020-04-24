@@ -42,7 +42,7 @@ const PostPage = (props) => {
         Donate
         Did we help? Feeling generous? Help us improve Unilous, support our Patreon  https://www.patreon.com/unilous?fan_landing=true
         `,
-        skillNames: ['one', 'two'], skillFills: [1, 0], skillCapacities: [3, 1],
+        skillNames: ['react (es6)', 'node.js', 'ui/ux designer', 'mopngodb'], skillFills: [0, 0, 0, 0], skillCapacities: [4, 2, 2, 1],
         user: {username: 'Unilous', _id: 'fake'},
         color: 'rgb(40,40,40)',
         team: [],
