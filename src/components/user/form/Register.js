@@ -80,7 +80,7 @@ const Register = (props) => {
                     <p style={{margin: 0, marginBottom: '5px'}}><strong>always view another users portafolio link before working with them</strong></p>
                     <ul style={{margin: 0}}>
                         <li>sites recommended: <strong>LinkedIn</strong>, <strong>Indeed</strong>, <strong>GitHub</strong>, or <strong>Facebook</strong></li>
-                        <li>to further ensure your reference link is trustworthy, link your Unilous accout from your reference link</li>
+                        <li>to further ensure your portafolio link is trustworthy, link your Unilous accout from your portafolio link</li>
                     </ul>
                 </InputHeader>
                 <input className="UF-input" {...referenceLink.fields} id="SI-referenceLink" />
