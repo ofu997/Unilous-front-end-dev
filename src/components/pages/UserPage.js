@@ -77,7 +77,7 @@ const UserPage = (props) => {
               <img className="UP-title-icon" src={userIcon} alt="user" />
               <h2 className="UP-title">{currentUser.username}</h2>
             </div>
-            <h3 className="UP-title" style={{opacity: '0.8'}}>reference link</h3>
+            <h3 className="UP-title" style={{opacity: '0.8'}}>profile link</h3>
             <ReferenceLink rl={currentUser.referenceLink} />
             <h2 className="UP-title">posts</h2>
             <div className="UP-posts-container">

@@ -31,6 +31,10 @@ const Register = (props) => {
             triggerAlert('warning', 'password$: password and re-password did not match', props.setAlert, props.resetAlert)
             return null
         }
+        if (!username.fields.value.length || !password.fields.value.length || !rePassword.fields.value.length || !referenceLink.fields.value.length) {
+            triggerAlert('warning', 'all$: all fields must be filled', props.setAlert, props.resetAlert)
+            return null
+        }
         const result = await registerMutation({
             variables: {
                 username: username.fields.value,
@@ -71,12 +75,12 @@ const Register = (props) => {
                     </ul>
                 </InputHeader>
                 <input className="UF-input" {...email.fields} id="SI-email" /> */}
-                <InputHeader inputFor="SI-referenceLink" info={true} title="reference link" color="dark" >
+                <InputHeader inputFor="SI-referenceLink" info={true} title="portafolio link" color="dark" >
                     <p style={{margin: 0, marginBottom: '5px'}}>link on your user page used as a resume to demonstrate your ability</p>
-                    <p style={{margin: 0, marginBottom: '5px'}}><strong>always view another users reference link before working with them</strong></p>
+                    <p style={{margin: 0, marginBottom: '5px'}}><strong>always view another users portafolio link before working with them</strong></p>
                     <ul style={{margin: 0}}>
                         <li>sites recommended: <strong>LinkedIn</strong>, <strong>Indeed</strong>, <strong>GitHub</strong>, or <strong>Facebook</strong></li>
-                        <li>to further ensure your reference link is trustworthy, link your ProjectU accout from your reference link</li>
+                        <li>to further ensure your reference link is trustworthy, link your Unilous accout from your reference link</li>
                     </ul>
                 </InputHeader>
                 <input className="UF-input" {...referenceLink.fields} id="SI-referenceLink" />
