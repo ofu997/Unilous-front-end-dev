@@ -18,7 +18,17 @@ import { setAlert, resetAlert } from '../../reducers/alertNotif'
 import { useField, triggerAlert, palletteGenerator } from '../../hooks/index'
 
 const PostPage = (props) => {
-    const [currentPost, setCurrentPost] = useState(null)
+    const [currentPost, setCurrentPost] = useState({
+        title: 'This is the tempporary title',
+        description: 'Here is a super long description to decorate the postHere is a super long description to decorate the postHere is a super long description to decorate the postHere is a super long description to decorate the postHere is a super long description to decorate the postHere is a super long description to decorate the postHere is a super long description to decorate the postHere is a super long description to decorate the postHere is a super long description to decorate the postHere is a super long description to decorate the post',
+        skillNames: ['one', 'two'], skillFills: [1, 0], skillCapacities: [3, 1],
+        user: {username: 'Unilous', _id: 'fake'},
+        color: 'rgb(40,40,40)',
+        team: [],
+        referenceLinks: [],
+        imageLinks: [],
+        _id: 'fakest'
+    })
     const [skillExpanded, setSkillExpanded] = useState(null)
     const question = useField('text')
     const message = useField('text')
@@ -84,7 +94,11 @@ const PostPage = (props) => {
         const reducer = currentPost
         if (!query) return null
         if (!query.findPost) return null
-        if (reducer) return null
+        if (reducer) {
+            console.log(reducer.title)
+            console.log(query.findPost.title)
+            if (reducer.title === query.findPost.title) return null
+        }
         return query.findPost
     }
     const qanda = qandaChangeConditions()
@@ -97,7 +111,7 @@ const PostPage = (props) => {
             setCurrentPost(post)
         }
     }, [qanda, post, setCurrentPost, currentPost])
-    if (!currentPost || !currentPost.qanda) {
+    if (!currentPost) {
         return <Loading />
     }
 
@@ -106,7 +120,7 @@ const PostPage = (props) => {
     // cleanedTime = cleanedTime.slice(1,4).join(' ') + ' ' + cleanedTime[4].split(':').slice(0,2).join(':')
     cleanedTime = cleanedTime.slice(1,3).join(' ') + ', ' + cleanedTime[3]
 
-    let qandaList = currentPost.qanda.map(i => <PostQandA qanda={i} key={`QandA${i.question}`} />)
+    let qandaList = currentPost.qanda ? currentPost.qanda.map(i => <PostQandA qanda={i} key={`QandA${i.question}`} />) : <Loading />
     qandaList = qandaList.length ? qandaList : <div className="qanda-text">no question and answer pairs yet</div>
     const skillsHTML = []
     const questionStyle = skillExpanded ? {display: 'none'} : {display: 'block'}
@@ -196,12 +210,13 @@ const PostPage = (props) => {
     }
     const pallette = palletteGenerator(currentPost.color).colorPallette
 
-    const teamHTML = currentPost.team.map(un =>
+    const teamHTML = currentPost.team ? currentPost.team.map(un =>
         <Link to={`/user/${un}`} className="PPC-user-container neutralize-link" key={`PT${un}`}>
             <img className="PPC-user-icon" src={userIcon} alt="user" />
             <p className="NM">{un}</p>
         </Link>
-    )
+        
+    ): null
 
     const HomeContent = () => {
         if (props.home) {

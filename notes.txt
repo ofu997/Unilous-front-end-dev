@@ -7,6 +7,8 @@ Do next (now)
         by disguising messages to my official account
     make it so that the back end is safer
     clean large code
+    implement domain
+    create home page
 
     fix mobile nav layout
     solve error where the site does not recognize other routes

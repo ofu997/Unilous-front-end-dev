@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { palletteGenerator } from '../../hooks/index'
 import { useMutation } from '@apollo/react-hooks'
-import { DELETE_POST, REMOVE_SAVED_POST } from '../../schemas'
+import { REMOVE_SAVED_POST } from '../../schemas'
 import userIcon from '../../static/svg/userB.svg'
 import { setCurrentUserPosts, setCurrentUserSP } from '../../reducers/currentUser'
 import { setPostsForUFP } from '../../reducers/userForPage'
@@ -14,9 +14,9 @@ const PostSmall = (props) => {
     const handleError = (e) => {
         console.log(e)
     }
-    const [ deletePostMutation ] = useMutation(DELETE_POST, {
-        onError: handleError
-    })
+    // const [ deletePostMutation ] = useMutation(DELETE_POST, {
+    //     onError: handleError
+    // })
     const [ removeSPMutation ] = useMutation(REMOVE_SAVED_POST, {
         onError: handleError
     })
