@@ -22,8 +22,9 @@ const Logged = (props) => {
     const [showUtilities, setShowUtilities] = useState(true)
     const [utilityShown, setUtilityShown] = useState('')
 
+    const currentUserUN = localStorage.getItem('username') ? localStorage.getItem('username') : 'fakeUser'
     const userQuery = useQuery(FIND_USER, {
-        variables: {username: localStorage.getItem('username')}
+        variables: {username: currentUserUN}
     })
     const userQueryConditions = () => {
         const query = userQuery.data

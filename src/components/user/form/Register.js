@@ -35,7 +35,6 @@ const Register = (props) => {
             variables: {
                 username: username.fields.value,
                 password: password.fields.value,
-                email: email.fields.value,
                 referenceLink: referenceLink.fields.value,
             }
         })
@@ -65,13 +64,13 @@ const Register = (props) => {
                 <input className="UF-input" {...password.fields} id="SI-password" />
                 <InputHeader inputFor="SI-rePassword" info={false} title="re-type password" color="dark" />
                 <input className="UF-input" {...rePassword.fields} id="SI-rePassword" />
-                <InputHeader inputFor="SI-email" info={true} title="email" color="dark" >
+                {/* <InputHeader inputFor="SI-email" info={true} title="email" color="dark" >
                     <ul style={{margin: 0}}>
                         <li>untill further policy changes no emails are sent your way</li>
                         <li>only shown to users who you accept after contacting you directly (not through post)</li>
                     </ul>
                 </InputHeader>
-                <input className="UF-input" {...email.fields} id="SI-email" />
+                <input className="UF-input" {...email.fields} id="SI-email" /> */}
                 <InputHeader inputFor="SI-referenceLink" info={true} title="reference link" color="dark" >
                     <p style={{margin: 0, marginBottom: '5px'}}>link on your user page used as a resume to demonstrate your ability</p>
                     <p style={{margin: 0, marginBottom: '5px'}}><strong>always view another users reference link before working with them</strong></p>

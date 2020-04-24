@@ -53,7 +53,7 @@ let PostFormPage = (props) => {
             return null
         }
         if (message.includes('Path `description` (')) {
-            triggerAlert('warning', `description$: description of ${description.fields.value.length} characters must only have at most 1500 characters`, props.setAlert, props.resetAlert)
+            triggerAlert('warning', `description$: description of ${description.fields.value.length} characters must only have at most 3000 characters`, props.setAlert, props.resetAlert)
             return null
         }
         if (message.includes('duplicate contactLink')) {
@@ -267,7 +267,11 @@ let PostFormPage = (props) => {
                     <h1 className="pp-form-title" style={{textAlign: 'start', marginLeft: 0}}>create post</h1>
                     <InputHeader info={false} title="title" color="white" inputFor="PF-title" />
                     <input className="PF-search-input" id="PF-title" {...title.fields} />
-                    <InputHeader info={false} title="description" color="white" inputFor="PF-description" />
+                    <InputHeader info={true} title="description" color="white" inputFor="PF-description" >
+                        <ul style={{margin: 0}}>
+                            <li>any links starting with (https://) or (http://) get decorated like this <a href="https://www.unilous.com/post-form/" className="p-link neutralize-link">http://decorated-link.com</a></li>
+                        </ul>
+                    </InputHeader>
                     <textarea className="PF-search-input" id="PF-description" {...description.fields}  style={{height: '100px', width: '100%'}} />
                     <InputHeader info={true} title="color" color="white" inputFor="">
                         <ul style={{margin: 0}}>

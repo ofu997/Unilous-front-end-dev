@@ -39,11 +39,9 @@ export const ASK_QUESTION = gql`
     ){
       userFrom {
         username
-        email
       }
       userTo {
         username
-        email
       }
       message
       post{
@@ -74,11 +72,9 @@ export const ANSWER_QUESTION = gql`
     ){
       userFrom {
         username
-        email
       }
       userTo {
         username
-        email
       }
       message
       post{
@@ -200,7 +196,6 @@ export const FIND_USER = gql`
     findUser(username: $username) {
       username
       password
-      email
       referenceLink
       primarySkills{
         name
@@ -233,11 +228,10 @@ export const ALL_USERS = gql`
 `
 
 export const CREATE_USER = gql`
-  mutation createUser($username: String!, $password: String!, $email: String!, $referenceLink: String!) {
+  mutation createUser($username: String!, $password: String!, $referenceLink: String!) {
     createUser(
       username: $username,
       password: $password,
-      email: $email,
       referenceLink: $referenceLink
     ){
       username
@@ -261,7 +255,6 @@ export const ME = gql`
   query {
     me{
       username
-      email
       referenceLink
       primarySkills{
         name
@@ -322,12 +315,10 @@ export const ACCEPT_NOTIFICATION = gql`
     acceptNotification(notificationId: $notificationId) {
       userFrom {
         username
-        email
         _id
       }
       userTo {
         username
-        email
         _id
       }
       message
@@ -351,12 +342,10 @@ export const DECLINE_NOTIFICATION = gql`
     declineNotification(notificationId: $notificationId) {
       userFrom {
         username
-        email
         _id
       }
       userTo {
         username
-        email
         _id
       }
       message
@@ -380,11 +369,9 @@ export const LIST_OF_NOTIFICATIONS = gql`
     listOfNotifications(notifications: $notifications) {
       userFrom {
         username
-        email
       }
       userTo {
         username
-        email
       }
       message
       post{

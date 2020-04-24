@@ -47,8 +47,8 @@ export const websiteStats = (url) => {
         return {icon: internetIcon, color: '#484848',title: 'unknown url'}
     }
     const start = url.split('/')[2]
-    if (start.includes('projectu')) {
-        return {icon: logoIcon, color: '#282828', title: 'ProjectU'}
+    if (start.includes('unilous')) {
+        return {icon: logoIcon, color: '#282828', title: 'unilous'}
     }
     if (start.includes('discord')) {
         return {icon: discordIcon, color: '#7289DA', title: 'Discord'}

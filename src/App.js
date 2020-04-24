@@ -60,7 +60,7 @@ const App = (props) => {
       <Router>
         <NavBar query={query} onQueryChange={onQueryChange} />
         <SubNav />
-        <Route exact path="/" render={() => <PostPage home={true} postTitle="This will be the home page post for ProjectU" /> } />
+        <Route exact path="/" render={() => <PostPage home={true} postTitle="Unilous" /> } />
         <Route exact path="/contact/" render={() => <Contact />} />
         <Route exact path="/browse/" render={() => <Results query="" /> } />
         <Route path="/browse/:query" render={({match}) => <Results query={match.params.query} /> } />

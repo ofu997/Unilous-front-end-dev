@@ -8,6 +8,8 @@ Do next (now)
     clean large code
     add suggestions top skills in postFormPage
     create home page
+    remove the email requirement
+
     set up the back end
         fresh db
         fresh secret key

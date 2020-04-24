@@ -196,7 +196,7 @@ let NavBar = (props) => {
                 <div className="nav-bar-container-m">
                     <Link to="/" className="NB-brand neutralize-link">
                         <img src={logoIcon} className="NB-logo" alt="logo" />
-                        <h2>ProjectU</h2>
+                        <h2>Unilous</h2>
                     </Link>
                     <div className="NB-primary-utilities">
                         <img src={searchIconB} onClick={() => changeUtility('search')} className="PU-search" alt="search" />
