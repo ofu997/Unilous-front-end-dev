@@ -21,7 +21,7 @@ const renderApp = () => {
         return {
             headers: {
                 ...headers,
-                authorization: token ? `berySecret ${token}` : null,
+                authorization: token ? `Unilous*2000 ${token}` : null,
             }
         }
     })
