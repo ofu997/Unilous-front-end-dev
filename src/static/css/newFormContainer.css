@@ -52,15 +52,30 @@
 
 @media only screen and (max-width: 800px) {
     .form-wrapper {
+        width: 100vw;
         position: fixed;
         bottom: 0;
         right:0;
+        height: 80vh;
         display: grid;
         justify-content: end;
+        overflow-y: scroll;
+    }
+
+    .form-wrapper-m {
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        right:0;
+        height: 17vh;
+        display: grid;
+        justify-content: end;
+        overflow-y: scroll;
     }
     
     .form-container {
         height: 100%;
+        position: relative;
         width: 100vw;
         display: grid;
         background-color: white;

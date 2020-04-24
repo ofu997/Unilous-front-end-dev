@@ -7,9 +7,15 @@ Do next (now)
         by disguising messages to my official account
     make it so that the back end is safer
     clean large code
-    implement domain
     create home page
+    set up the back end
+        fresh db
+        fresh secret key
 
+    fix search bar on mobile
+    fix form on mobile
+    fix nav bar on mobile
+    implement domain
     fix mobile nav layout
     solve error where the site does not recognize other routes
 

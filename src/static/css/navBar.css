@@ -235,25 +235,32 @@
         position: relative;
         background-color: #f0f0f5;
         border-bottom: 2px solid #f0f0f5;
-        display: flex;
-        flex-direction: row;
-        justify-content: stretch;
+        display: grid;
+        /* flex-direction: row; */
+        grid-template-columns: repeat(6, auto);
+        /* justify-content: stretch; */
         column-gap: 3px;
     }
+    .login-bar {
+        grid-template-columns: 2fr 2fr 1fr;
+    }
+
     .search-bar {
         justify-self: center;
-        margin: auto;
+        /* margin: auto; */
         margin-top: 10px;
         margin-bottom: 10px;
         height: 30px;
-        width: 90%;
-        border-radius: 15px;
+        width: 80%;
         border-radius: 3px;
-        border: 2px #dfdfdf solid;
-        justify-self: start;
-        align-self: center;
+        /* border: 2px #dfdfdf solid; */
+        background-color: white;
+        border: none;
         display: grid;
         grid-template-columns: 30px 2px 1fr;
+    }
+    .search-input {
+        height: 70%;
     }
     .PN-container {
         display: grid;

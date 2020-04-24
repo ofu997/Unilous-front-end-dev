@@ -23,15 +23,19 @@ const NewFormContainer = (props) => {
     }
 
     return (
-        <div className="form-wrapper">
-            <div className="form-container HWM" style={{borderTopColor: props.pallette.color}}>
-                {signInWarning}
-                {props.children}
+        <React.Fragment>
+            <div className="form-wrapper">
+                <div className="form-container HWM" style={{borderTopColor: props.pallette.color}}>
+                    {signInWarning}
+                    {props.children}
+                </div>
             </div>
-            <div onClick={() => setExpanded(!expanded)} className="expand-overlay SWM" style={{backgroundColor: props.pallette.color}}>
-                <img src={props.pallette.handshakeIcon} className="overlay-image" alt="expand form" />
+            <div className="form-wrapper-m">
+                <div onClick={() => setExpanded(!expanded)} className="expand-overlay SWM" style={{backgroundColor: props.pallette.color}}>
+                    <img src={props.pallette.handshakeIcon} className="overlay-image" alt="expand form" />
+                </div>                
             </div>
-        </div>
+        </React.Fragment>
     )
 }
 

@@ -99,7 +99,7 @@ let NavBar = (props) => {
                         <Link to={`/user/${props.currentUser.username}`} onClick={() => changeMenuItem(null)} className="menu-item" style={{padding: 0, margin: 0}}><img src={userIcon} className="menu-item" alt="user page" /></Link>
                         {notifItemButton}
                         {followingItemButton}
-                        <img src={exitIcon} onClick={() => handleLogout()} className="menu-item-logout" alt="log out" />
+                        <img src={exitIcon} onClick={() => handleLogout()} className="menu-item" alt="log out" />
                         {moreItemButton}
                     </div>
                 )
@@ -111,7 +111,7 @@ let NavBar = (props) => {
                 <h3 onClick={() => changeMenuItem(i)} className="menu-item" key={`MI${i}`} >{i}</h3>
             )
             return (
-                <div className="nav-bar-sub-container-m" style={menuStyle}>
+                <div className="nav-bar-sub-container-m login-bar" style={menuStyle}>
                     {modalItemButtons}
                     {moreItemButton}
                 </div>
@@ -214,9 +214,8 @@ let NavBar = (props) => {
                         <Link to={linkToPush} className="neutralize-link enter-search search-hover" onClick={() => enterQuery()}>
                             <img src={searchIconW} className="search-icon" alt="search" />
                         </Link>
-                        <div className="search-hr" style={{backgroundColor: 'white'}} />
+                        <div className="search-hr" style={{backgroundColor: 'white', height: '0'}} />
                         <input value={props.query} className="search-input" type="text" onChange={(e) => props.onQueryChange(e)} onKeyPress={(e) => handleKeyPress(e)} placeholder="search or enter nothing for all results" />
-                        <div className="SB-separator" />
                         <SkillSugg query={props.query} onSuggestionClicked={onSuggestionClicked} />
                     </div>
                 </div>
