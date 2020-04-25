@@ -14,7 +14,7 @@
     .post-page-container {
         margin: auto;
         padding-top: 20px;
-        width: 95%;
+        width: 80%;
         display: grid;
         grid-template-columns: 100%;
     }

@@ -29,10 +29,18 @@ const Results = (props) => {
             eventQuery: props.eventSearch,
         }
     })
-    if ((window.innerHeight + window.scrollY) > (document.body.offsetHeight - 400) && !scrollAtBottom) {
+    const moreResults = () => {
+        if (SPQuery.data && SPQuery.data.searchPosts === null) {
+            console.log(false)
+            return false
+        }
+        console.log(true)
+        return true
+    }
+    if ((window.innerHeight + window.scrollY) > (document.body.offsetHeight - 100) && !scrollAtBottom) {
         setScrollAtBottom(true)
     }
-    if ((window.innerHeight + window.scrollY) <= (document.body.offsetHeight - 400) && scrollAtBottom) {
+    if ((window.innerHeight + window.scrollY) <= (document.body.offsetHeight - 100) && scrollAtBottom) {
         setScrollAtBottom(false)
     }
     const triggerWhenScroll = () => {
@@ -135,6 +143,7 @@ const Results = (props) => {
     )
     
     const eventsContainerClass = props.eventSearch ? 'EC-active' : null
+    const showLoading = moreResults() ? <Loading /> : <h3 style={{opacity: '0.8'}}>no more posts</h3>
     return (
         <div className="home-wrapper">
             <div className="results-container">
@@ -161,6 +170,9 @@ const Results = (props) => {
                 <div />
                 <div className={`results-content ${layoutClass}`}>
                     {postsToShow}
+                </div>
+                <div style={{position: 'relative', height: '400px'}}>
+                    {showLoading}
                 </div>
             </div>
         </div>

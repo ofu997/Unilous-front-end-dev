@@ -5,7 +5,7 @@ import { SKILL_SEARCH } from '../schemas'
 import Loading from './Loading'
 
 const SkillSugg = (props) => {
-    const splitQuery = props.query.split(' ')
+    const splitQuery = props.query.toLowerCase().split(' ')
     const lastWord = splitQuery.slice(-1) === '' ? splitQuery.slice(-2, -1)[0] : splitQuery.slice(-1)[0]
     const [skills, setSkills] = useState([])
     const skillSearchQuery = useQuery(SKILL_SEARCH, {

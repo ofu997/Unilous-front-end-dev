@@ -116,8 +116,12 @@ let PostFormPage = (props) => {
             props.history.push(`/post/${encodeURIComponent(postCreated.data.addPost.title)}`)
         }
     }
-    // 
-    const colors = ['rgb(44,52,59)', 'rgb(15,138,95)', 'rgb(133,156,177)', 'rgb(224,52,77)', 'rgb(245,165,0)', 'rgb(1,152,173)', 'rgb(16,79,37)', 'rgb(152,183,49)', 'rgb(113,112,255)']
+    const colors = [
+        'rgb(199,0,57)', 'rgb(224,52,77)', 'rgb(245,165,0)', 'rgb(250,116,79)', 'rgb(246,172,200)',
+        'rgb(16,79,37)', 'rgb(15,138,95)', 'rgb(140,186,81)', 'rgb(152,183,49)', 'rgb(127,205,145)', 
+        'rgb(2,66,73)', 'rgb(15,76,117)', 'rgb(50,62,221)', 'rgb(1,152,173)', 'rgb(113,112,255)',  
+        'rgb(20,20,20)', 'rgb(60,60,60)', 'rgb(133,156,177)'
+    ]
     const colorsHTML = colors.map(c => <div onClick={() => setColor(c)} className="color-ins" style={{backgroundColor: c}} key={`PFC${c}`} />)
     const addSkills = () => {
         let cleanedSkill = []
