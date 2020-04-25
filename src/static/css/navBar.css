@@ -112,25 +112,6 @@
     background-color: white;
     color: #282828;
 } 
-
-.search-suggestions-container {
-    position: relative;
-    grid-column: 1/5;
-    top: -15px;
-    z-index: 0;
-}
-.search-suggestions {
-    width: 100%;
-    color: #282828;
-    padding-top: 15px;
-    text-align: left;
-    background-color: white;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    display: grid;
-    grid-template-columns: 100%;
-    border-bottom: 2px solid #dfdfdf;
-}
 .search-description {
     text-align: start;
     margin: 0;

@@ -11,6 +11,7 @@ import { websiteStats } from '../../hooks/index'
 import InputHeader from '../InputHeader'
 import { setAlert, resetAlert } from '../../reducers/alertNotif'
 import { triggerAlert } from '../../hooks/index'
+import SkillSugg from '../SkillSugg'
 
 let PostFormPage = (props) => {
     const title = useField('text')
@@ -119,6 +120,11 @@ let PostFormPage = (props) => {
     const colors = ['rgb(44,52,59)', 'rgb(15,138,95)', 'rgb(133,156,177)', 'rgb(224,52,77)', 'rgb(245,165,0)', 'rgb(1,152,173)', 'rgb(16,79,37)', 'rgb(152,183,49)', 'rgb(113,112,255)']
     const colorsHTML = colors.map(c => <div onClick={() => setColor(c)} className="color-ins" style={{backgroundColor: c}} key={`PFC${c}`} />)
     const addSkills = () => {
+        let cleanedSkill = []
+        for (const word of skillName.split(' ')) {
+            if (word.length) cleanedSkill.push(word)
+        }
+        setSkillName(cleanedSkill.join(' '))
         if (Number(skillCapacity)){
             setSkillNameList(skillNameList.concat(skillName.toLowerCase()))
             setSkillName('')
@@ -258,6 +264,10 @@ let PostFormPage = (props) => {
     const signInWarning = props.token ? null : (
         <h3 className="warning-container">must be signed in to add post</h3>
     )
+    const onSuggestionClicked = (skill) => {
+        const skillToEnter = `${skill} `
+        setSkillName(skillToEnter)
+    }
     return (
         <div className="post-form0-container">
             <div className="navbar-height" />
@@ -293,6 +303,9 @@ let PostFormPage = (props) => {
                         <div className="PF-skill-fields">
                             <input className="PF-search-input" placeholder="skill name" id="PF-skillName" value={skillName} onChange={(e) => setSkillName(e.target.value)} type="text" style={{marginBottom: 0}} />
                             <input className="PF-search-input" placeholder="amount of help" value={skillCapacity} onChange={(e) => setSkillCapacity(e.target.value)} type="number" style={{marginBottom: 0}} />
+                            <div className="PF-skill-sugg-container">
+                                <SkillSugg query={skillName} onSuggestionClicked={onSuggestionClicked} style={{gridColumn: '1/2'}} />
+                            </div>
                         </div>
                         <h4 onClick={() => addSkills()} className="PF-field-submit standard-hover">add skill</h4>               
                     </div>

@@ -167,3 +167,21 @@ h1,h2,h3,h4,h5 {
     opacity: 0.8;
     transition: opacity 0.1s;
 }
+.search-suggestions-container {
+    position: relative;
+    grid-column: 1/5;
+    top: -15px;
+    z-index: 0;
+}
+.search-suggestions {
+    width: 100%;
+    color: #282828;
+    padding-top: 15px;
+    text-align: left;
+    background-color: white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: grid;
+    grid-template-columns: 100%;
+    border-bottom: 2px solid #dfdfdf;
+}
