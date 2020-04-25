@@ -5,6 +5,11 @@
     display: grid;
     grid-template-columns: 65% 35%;
 }
+.home-options {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 10px;
+}
 @media only screen and (max-width: 800px) {
     .post-page-container {
         margin: auto;
@@ -13,15 +18,17 @@
         display: grid;
         grid-template-columns: 100%;
     }
+    .home-options {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 10px;
+        margin-bottom: 10px;
+    }
 }
 .PP-content {
     text-align: start;
 }
-.home-options {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin-bottom: 10px;
-}
+
 .home-option {
     width: 90%;
     margin: auto;
