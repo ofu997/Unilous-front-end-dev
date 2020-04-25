@@ -24,8 +24,8 @@ const NewFormContainer = (props) => {
 
     return (
         <React.Fragment>
-            <div className="form-wrapper">
-                <div className="form-container HWM" style={{borderTopColor: props.pallette.color}}>
+            <div className="form-wrapper HWM">
+                <div className="form-container" style={{borderTopColor: props.pallette.color}}>
                     {signInWarning}
                     {props.children}
                 </div>
