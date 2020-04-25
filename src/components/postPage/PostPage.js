@@ -21,15 +21,15 @@ const PostPage = (props) => {
     const [currentPost, setCurrentPost] = useState({
         title: 'Unilous ',
         description: `
-        Unilous is a tool for anyone looking to build a team. It expands your network to all of our users so that anyone interested in your post can join you to execute whatever the goal of your post may be. Alternatively, it can also serve as a project page for recruiting people outside of Unilous.
+        Unilous is a tool for anyone looking to build a team. It expands your network to all of our users so that if there is mutual interest between the post creator and the visitor they can team up. From there the team should be primed to execute whatever the goal of their post may be. Alternatively, it can also serve as a project page for recruiting people outside of Unilous.
 
         Features
-        Unilous central feature is a user's ability to join another’s goal through the post. This feature streamlines the team-building process.
-        The post is how the user communicates his idea to visitors. To facilitate that Unilous also offers a question and answer feature which displays all answered posts, this will help clarify the objective of the post when all else fails.
+        Unilous central feature is a user's ability to join another’s team through their post. This feature streamlines the team-building process.
+        The post is how the user communicates his/her idea to visitors. To clarify the description of the idea, Unilous also offers a question and answer feature. It displays all answered posts, this will help clarify the objective of the post when all else fails.
         
         How Unilous came to be
-        I was working on an iteration of Unilous where the objective was far more ambitious than what it is today. As I was working on it I came to understand that to execute the project I could not execute it alone. Consequently, I turned to network, unfortunately, since my network is somewhat thin I turned to other sites but none of them were effective.
-        As a result, the idea dawned on me, using the frame of what I have already built I will fill this void for simplistic team-building sites. This could not only serve other people out there with similar struggles, but for myself as well, as I (hopefully joined by others in the future) continue to build Unilous into a fantastic product.
+        I was working on an iteration of Unilous where the objective was far more ambitious than what it is today. As I was working on it I came to understand that to execute the project I could not go about it alone. Consequently, I turned to networking, unfortunately, since my network is somewhat thin I turned to other sites but none of them were effective.
+        As a result, the idea dawned on me, using the frame of what I have already built I will fill this void for simplistic team-building sites. This could not only serve other people with similar struggles, but for myself as well, as I (hopefully joined by others in the future) continue to build Unilous into a fantastic product.
         
         Join Unilous (or any other post)
         1. Register
@@ -37,10 +37,11 @@ const PostPage = (props) => {
         3. Join!
         
         Contact us
-        Send http://localhost:3000/user/Unilous a message or visit https://www.unilous.com/contact to contact us directly.
+        Send http://localhost:3000/user/Unilous a message or to contact us directly visit https://www.unilous.com/contact. 
         
         Donate
-        Did we help? Feeling generous? Help us improve Unilous, support our Patreon  https://www.patreon.com/unilous?fan_landing=true
+        Did we help? Feeling generous?
+        Help us improve Unilous, support our Patreon https://www.patreon.com/unilous?fan_landing=true        
         `,
         skillNames: ['react (es6)', 'node.js', 'ui/ux designer', 'mopngodb'], skillFills: [0, 0, 0, 0], skillCapacities: [4, 2, 2, 1],
         user: {username: 'Unilous', _id: 'fake'},
@@ -272,7 +273,7 @@ const PostPage = (props) => {
         const finalDis = spacedDis.join(' ')
         return <p className="PPC-description" dangerouslySetInnerHTML={{__html: finalDis}} />
     }
-
+    console.log(currentPost.description)
     return (
         <div>
             <div className="navbar-height" />

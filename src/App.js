@@ -17,6 +17,7 @@ import './static/css/newFormContainer.css'
 import { FIND_USER, PENDING_NOTIFS } from './schemas'
 
 const App = (props) => {
+  localStorage.clear()
   const [query, setQuery] = useState('')
 
   const onQueryChange = (event) => {

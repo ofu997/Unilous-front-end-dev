@@ -37,6 +37,7 @@ const SignIn = (props) => {
             localStorage.setItem('token', token)
             localStorage.setItem('username', username.fields.value)
             props.setToken(token)
+            window.location.reload()
         }
     }
 
