@@ -165,7 +165,7 @@ const PostPage = (props) => {
         if (result) {
             setSkillExpanded(null)
             message.reset()
-            triggerAlert('success', `sent$: request has been sent to ${currentPost.user.username}`, props.setAlert, props.resetAlert)
+            triggerAlert('success', `sent$: (check your answered notifications for the response) request has been sent to ${currentPost.user.username}`, props.setAlert, props.resetAlert)
         }
     }
     for (const ins in currentPost.skillNames) {
@@ -225,7 +225,7 @@ const PostPage = (props) => {
         })
         if (result) {
             question.reset()
-            triggerAlert('success', `sent$: question has been sent to ${currentPost.user.username}`, props.setAlert, props.resetAlert)
+            triggerAlert('success', `sent$: (check your answered notifications for the response) question has been sent to ${currentPost.user.username}`, props.setAlert, props.resetAlert)
         }
     }
     const pallette = palletteGenerator(currentPost.color).colorPallette
