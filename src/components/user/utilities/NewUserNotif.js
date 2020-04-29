@@ -319,10 +319,10 @@ const NewUserNotif = (props) => {
                 return (
                     <div className="n-notif-container" style={{borderBottom: `5px solid ${notifStatusColor}`}}>
                         <h3 className="n-notif-header" style={{backgroundColor: notifStatusColor}}>recieved join request</h3>
-                        <Link to={`/user/${notif.userTo.username}`} className="n-notif-user neutralize-link">
-                            <div className="NU-label">to:</div>
+                        <Link to={`/user/${notif.userFrom.username}`} className="n-notif-user neutralize-link">
+                            <div className="NU-label">from:</div>
                             <img src={userIcon} className="NU-icon" alt='user' />
-                            <div className="NU-username">{notif.userTo.username}</div>
+                            <div className="NU-username">{notif.userFrom.username}</div>
                         </Link>
                         <PostSmall post={notif.post} user={notif.userTo.username} />
                         <div className="n-notif-STJ-container">
@@ -346,10 +346,10 @@ const NewUserNotif = (props) => {
                 return (
                     <div className="n-notif-container" style={{borderBottom: `5px solid ${notifStatusColor}`}}>
                         <h3 className="n-notif-header" style={{backgroundColor: notifStatusColor}}>recieved question</h3>
-                        <Link to={`/user/${notif.userTo.username}`} className="n-notif-user neutralize-link">
-                            <div className="NU-label">to:</div>
+                        <Link to={`/user/${notif.userFrom.username}`} className="n-notif-user neutralize-link">
+                            <div className="NU-label">from:</div>
                             <img src={userIcon} className="NU-icon" alt='user' />
-                            <div className="NU-username">{notif.userTo.username}</div>
+                            <div className="NU-username">{notif.userFrom.username}</div>
                         </Link>
                         <PostSmall post={notif.post} user={notif.userTo.username} style={{margin: 0, padding: 0}} />
                         <div className="n-notif-content-primary">
