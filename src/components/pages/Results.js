@@ -7,7 +7,6 @@ import { SEARCH_POSTS } from '../../schemas'
 import { addPosts } from '../../reducers/posts'
 import { Link } from 'react-router-dom'
 import Loading from '../Loading'
-import OldFormContainer from '../OldFormContainer'
 import { palletteGenerator } from '../../hooks'
 import { toggleStretchLayout } from '../../reducers/stretchLayout'
 import { setEventSearch } from '../../reducers/eventSearch'
@@ -147,10 +146,8 @@ const Results = (props) => {
     return (
         <div className="home-wrapper">
             <div className="results-container">
-                <Link to="/post-form/">
-                    <OldFormContainer setTitle="create post" icon={pallette.plusIcon} pallette={pallette}>
-                        <div />
-                    </OldFormContainer>
+                <Link to="/post-form/" className="form-container-expand standard-hover neutralize-link" title={props.setTitle}>
+                    <img className="form-expand-icon" src={pallette.plusIcon} alt="team up" />
                 </Link>
                 <div className="navbar-height"/>
                 <h2 className="secondary-title">events</h2>

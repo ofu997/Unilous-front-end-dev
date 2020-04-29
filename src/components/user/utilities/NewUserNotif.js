@@ -8,7 +8,7 @@ import { ACCEPT_NOTIFICATION, DECLINE_NOTIFICATION, ANSWER_QUESTION } from '../.
 import { setCurrentUserNotifications } from '../../../reducers/currentUser'
 import { setAlert, resetAlert } from '../../../reducers/alertNotif'
 import { useField, websiteStats, triggerAlert } from '../../../hooks/index'
-import '../../../static/css/newNotifs.css'
+import '../../../static/css/notifs.css'
 
 const NewUserNotif = (props) => {
     const handleError = (e) => {

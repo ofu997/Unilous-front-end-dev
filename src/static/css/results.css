@@ -185,3 +185,22 @@
     align-content: flex-start;
     row-gap: 20px;
 }
+
+.form-container-expand {
+    position: fixed;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #282828;
+    border-top-left-radius: 100px;
+    display: grid;
+}
+.form-expand-icon {
+    position: relative;
+    width: 45px;
+    left: 10px;
+    top: 10px;
+    margin: auto;
+}
