@@ -12,6 +12,7 @@ import PostQandA from './PostQandA'
 import InputHeader from '../InputHeader'
 import FormContainer from '../FormContainer'
 import plusIcon from '../../static/svg/plusW.svg'
+import discordIcon from '../../static/svg/discord.svg'
 import searchIcon from '../../static/svg/searchWW.svg'
 import { setCurrentUserSP } from '../../reducers/currentUser'
 import { setAlert, resetAlert } from '../../reducers/alertNotif'
@@ -250,10 +251,12 @@ const PostPage = (props) => {
                         <img src={plusIcon} className="home-option-icon" alt="add" />
                         <h3 className="home-option-text">add project</h3>
                     </Link>
+                    <a href="https://discord.gg/v7vFc9U" className="home-option home-option-highlight neutralize-link" style={{backgroundColor: '#7289DA'}}>
+                        <img src={discordIcon} className="home-option-icon" alt="Discord" />
+                        <h3 className="home-option-text">community discord</h3>
+                    </a>
                 </div>
-
             )
-
         }
         else {
             return null
