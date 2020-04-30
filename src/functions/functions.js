@@ -42,7 +42,7 @@ export const websiteStats = (url) => {
     }
     const start = url.split('/')[2]
     if (start.includes('unilous')) {
-        return {icon: logoIcon, color: '#282828', title: 'unilous'}
+        return {icon: logoIcon, color: '#282828', title: 'Unilous'}
     }
     if (start.includes('discord')) {
         return {icon: discordIcon, color: '#7289DA', title: 'Discord'}
@@ -78,8 +78,8 @@ export const useField = (type) => {
     const [value, setValue] = useState('')
     const onChange = (event) => {
         setValue(event.target.value)
-    } 
-
+    }
+    
     const reset = () => {
         setValue('')
     }

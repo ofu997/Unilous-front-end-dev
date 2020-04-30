@@ -13,6 +13,7 @@ const SignIn = (props) => {
 
     const onError = (e) => {
         let cleanedMessage = e.message
+        console.log(cleanedMessage)
         cleanedMessage = cleanedMessage.split(':')
         cleanedMessage = cleanedMessage.slice(1, cleanedMessage.length).join('$:')
         triggerAlert('warning', cleanedMessage, props.setAlert, props.resetAlert)

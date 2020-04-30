@@ -18,6 +18,7 @@ import searchIcon from '../../static/svg/searchWW.svg'
 import { setCurrentUserSP } from '../../reducers/currentUser'
 import { setAlert, resetAlert } from '../../reducers/alertNotif'
 import { useField, triggerAlert, palletteGenerator } from '../../functions/functions'
+import { Helmet } from 'react-helmet'
 
 const PostPage = (props) => {
     const [currentPost, setCurrentPost] = useState({
@@ -277,9 +278,29 @@ const PostPage = (props) => {
         const finalDis = spacedDis.join(' ')
         return <p className="PPC-description" dangerouslySetInnerHTML={{__html: finalDis}} />
     }
-    console.log(currentPost.description)
+    const skillCap = currentPost.skillCapacities.reduce((n, t) => t + n, 0)
+    const skillFill = currentPost.skillFills.reduce((n, t) => t + n, 0)
+    const titleKeywords = () => {
+        let title = currentPost.title
+        title = title.split(' ')
+        let keywords = title.map(w => {
+            if (w.slice(0, 1).toUpperCase() === w.slice(0, 1) && w.slice(0, 1).toLowerCase() === w.slice(0, 1)) return null
+            if (w.slice(0, 1).toUpperCase() === w.slice(0, 1)) return w + ','
+            return null
+        })
+        keywords = keywords.length ? keywords.join(' ') : title[0] + ', '
+        
+        return keywords
+    }
+    
     return (
         <div>
+            <Helmet>
+                <title>{currentPost.title}</title>
+                <meta name="author" content={currentPost.user.username} />
+                <meta name="description" content={`Join the project, be part of "${currentPost.title}" team! So far ${skillFill} awesome people have joined, there are only ${skillCap - skillFill} slots left.`} />
+                <meta name="keywords" content={`${titleKeywords()} build, team`} />
+            </Helmet>
             <div className="navbar-height" />
             <div className="post-page-container">
                 <div className="PP-content">

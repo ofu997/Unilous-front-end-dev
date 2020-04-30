@@ -30,10 +30,8 @@ const Results = (props) => {
     })
     const moreResults = () => {
         if (SPQuery.data && SPQuery.data.searchPosts === null) {
-            console.log(false)
             return false
         }
-        console.log(true)
         return true
     }
     if ((window.innerHeight + window.scrollY) > (document.body.offsetHeight - 100) && !scrollAtBottom) {
