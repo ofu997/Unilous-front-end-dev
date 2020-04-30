@@ -295,11 +295,17 @@ const PostPage = (props) => {
     
     return (
         <div>
-            <Helmet>
+            {/* <Helmet>
                 <title>{currentPost.title}</title>
                 <meta name="author" content={currentPost.user.username} />
                 <meta name="description" content={`Join the project, be part of "${currentPost.title}" team! So far ${skillFill} awesome people have joined, there are only ${skillCap - skillFill} slots left.`} />
                 <meta name="keywords" content={`${titleKeywords()} build, team`} />
+            </Helmet> */}
+            <Helmet>
+                <title>title</title>
+                <meta name="author" content='author' />
+                <meta name="description" content='description' />
+                <meta name="keywords" content='key, words' />
             </Helmet>
             <div className="navbar-height" />
             <div className="post-page-container">
