@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import logoB from '../static/svg/logoB.svg'
-import logoW from '../static/svg/logoW.svg'
+import logoB from '../static/svg/logo/logoB.svg'
+import logoW from '../static/svg/logo/logoW.svg'
 
 const Loading = (props) => {
     if (props.size === 'small') {

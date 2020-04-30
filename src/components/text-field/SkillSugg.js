@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useQuery } from '@apollo/react-hooks'
-import { SKILL_SEARCH } from '../schemas'
-import Loading from './Loading'
+import { SKILL_SEARCH } from '../../schemas/queries'
+import Loading from '../Loading'
 
 const SkillSugg = (props) => {
     const splitQuery = props.query.toLowerCase().split(' ')

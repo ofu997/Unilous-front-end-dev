@@ -1,14 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { palletteGenerator } from '../../hooks/index'
 import { useMutation } from '@apollo/react-hooks'
-import { REMOVE_SAVED_POST } from '../../schemas'
+import { REMOVE_SAVED_POST } from '../../schemas/mutations'
 import userIcon from '../../static/svg/userB.svg'
 import { setCurrentUserPosts, setCurrentUserSP } from '../../reducers/currentUser'
-import { setPostsForUFP } from '../../reducers/userForPage'
 import { setAlert, resetAlert } from '../../reducers/alertNotif'
-import { triggerAlert } from '../../hooks/index'
+import { triggerAlert, palletteGenerator } from '../../functions/functions'
 
 const PostSmall = (props) => {
     const handleError = (e) => {
@@ -66,7 +64,6 @@ const PostSmall = (props) => {
 
     if (props.currentUser) {
         if (user === props.currentUser.username) {
-            console.log(user)
             return (
                 <div className="post-wrapper-sm">
                     <div className="post-color-indicator" style={{backgroundColor: pallette.color}} />
@@ -104,10 +101,9 @@ const PostSmall = (props) => {
 const mapStateToProps = (state) => {
 	return {
         currentUser: state.currentUser,
-        userForPage: state.userForPage
 	}
 }
 export default connect(
     mapStateToProps,
-    { setCurrentUserPosts, setCurrentUserSP, setPostsForUFP, setAlert, resetAlert }
+    { setCurrentUserPosts, setCurrentUserSP, setAlert, resetAlert }
 )(PostSmall)

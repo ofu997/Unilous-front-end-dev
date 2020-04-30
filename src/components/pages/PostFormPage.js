@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { useMutation } from '@apollo/react-hooks'
-import { CREATE_POST } from '../../schemas'
-import { useField } from '../../hooks/index'
-import '../../static/css/postForm.css'
-import { palletteGenerator } from '../../hooks/index'
-import { setSkillProposition } from '../../reducers/skillProposition'
+import { CREATE_POST } from '../../schemas/mutations'
+import { useField, triggerAlert, palletteGenerator, websiteStats } from '../../functions/functions'
+import '../../static/css/pages/postForm.css'
 import { withRouter } from 'react-router-dom'
-import { websiteStats } from '../../hooks/index'
-import InputHeader from '../InputHeader'
+import InputHeader from '../text-field/InputHeader'
 import { setAlert, resetAlert } from '../../reducers/alertNotif'
-import { triggerAlert } from '../../hooks/index'
-import SkillSugg from '../SkillSugg'
+import SkillSugg from '../text-field/SkillSugg'
 
 let PostFormPage = (props) => {
     const title = useField('text')
@@ -65,12 +61,6 @@ let PostFormPage = (props) => {
     const [createPost] = useMutation( CREATE_POST, {
         onError: handleError
     })
-    useEffect(() => {
-        if (!props.skillProposition) {
-            props.setSkillProposition(Array(skillNameList.length).fill(0))
-        }
-    }, [props.setSkillProposition,skillNameList, props, props.skillProposition])
-    
     const pallette = color ? palletteGenerator(color).colorPallette : {color: null, heigherColor: null}
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -101,7 +91,6 @@ let PostFormPage = (props) => {
             }
         })
         if (postCreated) {
-            props.setSkillProposition(null)
             title.reset()
             description.reset()
             groupContactLink.reset()
@@ -134,7 +123,6 @@ let PostFormPage = (props) => {
             setSkillName('')
             setSkillCapList(skillCapList.concat(Number(skillCapacity)))
             setSkillCapacity('')
-            props.setSkillProposition(props.skillProposition.concat(0))
             setSkillProposition(null)
             setSkillSelected(null)
         }
@@ -154,7 +142,6 @@ let PostFormPage = (props) => {
         for (const i in props.skillProposition) {
             if (i !== ind) { newSkillProposition.push(props.skillProposition[i]) }
         }
-        props.setSkillProposition(newSkillProposition)
     }
     
     const removeImage = (ind) => {
@@ -355,5 +342,5 @@ const mapStateToProps = (state) => {
 }
 export default connect(
     mapStateToProps,
-    { setSkillProposition, setAlert, resetAlert }
+    { setAlert, resetAlert }
 )(PostFormPage)

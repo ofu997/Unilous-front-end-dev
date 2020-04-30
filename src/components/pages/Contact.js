@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import '../../static/css/contact.css'
-import logoIcon from '../../static/svg/logoW.svg'
+import '../../static/css/pages/contact.css'
+import logoIcon from '../../static/svg/logo/logoW.svg'
 
 const Contact = (props) => {
     

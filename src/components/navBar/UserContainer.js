@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import '../../static/css/newUser.css'
-import NotLogged from './NotLogged'
-import Logged from './Logged'
+import '../../static/css/user/user.css'
+import NotLogged from '../user/structure/NotLogged'
+import Logged from '../user/structure/Logged'
 
 
 const UserContainer = (props) => {

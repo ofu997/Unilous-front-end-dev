@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
-const NewFormContainer = (props) => {
+const FormContainer = (props) => {
     const [expanded, setExpanded] = useState(false)
 
     const signInWarning = props.token ? null : (
@@ -46,4 +46,4 @@ const mapStateToProps = (state) => {
 }
 export default connect(
     mapStateToProps
-)(NewFormContainer)
+)(FormContainer)

@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { useMutation } from '@apollo/react-hooks'
-import { CREATE_USER } from '../../../schemas'
-import InputHeader from '../../InputHeader'
-import { useField, triggerAlert } from '../../../hooks/index'
+import { CREATE_USER } from '../../../schemas/mutations'
+import InputHeader from '../../text-field/InputHeader'
+import { useField, triggerAlert } from '../../../functions/functions'
 import { setAlert, resetAlert } from '../../../reducers/alertNotif'
 
 const Register = (props) => {

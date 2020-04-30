@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useQuery } from '@apollo/react-hooks'
-import { LIST_OF_POSTS } from '../../schemas'
+import { LIST_OF_POSTS } from '../../schemas/queries'
 import PostSmall from '../post/PostSmall'
 import Loading from '../Loading'
 

@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 import userIcon from '../../../static/svg/userB.svg'
 import PostSmall from '../../post/PostSmall'
 import { useMutation } from '@apollo/react-hooks'
-import { ACCEPT_NOTIFICATION, DECLINE_NOTIFICATION, ANSWER_QUESTION } from '../../../schemas'
+import { ACCEPT_NOTIFICATION, DECLINE_NOTIFICATION, ANSWER_QUESTION } from '../../../schemas/mutations'
 import { setCurrentUserNotifications } from '../../../reducers/currentUser'
 import { setAlert, resetAlert } from '../../../reducers/alertNotif'
-import { useField, websiteStats, triggerAlert } from '../../../hooks/index'
+import { useField, websiteStats, triggerAlert } from '../../../functions/functions'
 import '../../../static/css/notifs.css'
 
-const NewUserNotif = (props) => {
+const Notif = (props) => {
     const handleError = (e) => {
         console.log(e)
     }
@@ -392,4 +392,4 @@ const mapStateToProps = (state) => {
 export default connect(
     mapStateToProps,
     { setCurrentUserNotifications, setAlert, resetAlert }
-)(NewUserNotif)
+)(Notif)

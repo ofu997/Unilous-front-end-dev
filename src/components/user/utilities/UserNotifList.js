@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useQuery } from '@apollo/react-hooks'
-import { LIST_OF_NOTIFICATIONS } from '../../../schemas'
+import { LIST_OF_NOTIFICATIONS } from '../../../schemas/queries'
 import { setCurrentUserNotifications } from'../../../reducers/currentUser'
-import NewUserNotif from './NewUserNotif'
+import Notif from './Notif'
 import Loading from '../../Loading'
 
 
@@ -117,7 +117,7 @@ const UserNotifList = (props) => {
     }
     const showNotifications = props.currentUser.notifications.map(n => {
         if (statusConditions(n) && sentConditions(n)){
-            return <NewUserNotif notif={n} key={`UN${n._id}`}/>
+            return <Notif notif={n} key={`UN${n._id}`}/>
         }
         return null
     }).reverse()

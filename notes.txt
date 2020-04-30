@@ -1,11 +1,19 @@
 Do next (now)
     implement delete functionality
         make it so that it does not cause problems with notifs
-    fix font
     add report system
         by disguising messages to my official account
     make it so that the back end is safer
-    clean large code
+    simplify code
+        front end
+            Notifs
+            PostFormPage
+            UserNotifList
+            Notif
+            Navbar
+
+    continue filing svg
+    simplified backend
 
     add suggestions top skills in postFormPage
 

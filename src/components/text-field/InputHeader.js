@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import infoIconW from '../static/svg/infoW.svg'
-import infoIconB from '../static/svg/infoB.svg'
-import '../static/css/inputHeader.css'
+import infoIconW from '../../static/svg/infoW.svg'
+import infoIconB from '../../static/svg/infoB.svg'
+import '../../static/css/inputHeader.css'
 
 const InputHeader = (props) => {
     const [expanded, setExpanded] = useState(false)

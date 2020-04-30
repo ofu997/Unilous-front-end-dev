@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import '../../static/css/newUser.css'
-import userIcon from '../../static/svg/userW.svg'
-import SignIn from './form/SignIn'
-import Register from './form/Register'
+import '../../../static/css/user/user.css'
+import userIcon from '../../../static/svg/userW.svg'
+import SignIn from '../form/SignIn'
+import Register from '../form/Register'
 
 
 const NotLogged = (props) => {

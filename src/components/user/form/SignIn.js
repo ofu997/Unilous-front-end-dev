@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { useMutation } from '@apollo/react-hooks'
-import { LOGIN } from '../../../schemas'
-import { useField, triggerAlert } from '../../../hooks/index'
+import { LOGIN } from '../../../schemas/mutations'
+import { useField, triggerAlert } from '../../../functions/functions'
 import { setToken } from '../../../reducers/token'
-import InputHeader from '../../InputHeader'
+import InputHeader from '../../text-field/InputHeader'
 import { setAlert, resetAlert } from '../../../reducers/alertNotif'
 
 const SignIn = (props) => {

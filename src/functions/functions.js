@@ -1,29 +1,23 @@
 import React, { useState } from 'react'
 import userIconB from '../static/svg/userB.svg'
-import clockIconB from '../static/svg/clockB.svg'
 import handshakeIconB from '../static/svg/handshakeB.svg'
 import plusIconB from '../static/svg/plusB.svg'
 import shareIconB from '../static/svg/shareB.svg'
-import reloadIconB from '../static/svg/reloadB.svg'
 import shrinkB from '../static/svg/shrinkB.svg'
-import pinB from '../static/svg/pinB.svg'
 import userIconW from '../static/svg/userW.svg'
-import clockIconW from '../static/svg/clockW.svg'
 import handshakeIconW from '../static/svg/handshakeW.svg'
 import plusIconW from '../static/svg/plusW.svg'
 import shareIconW from '../static/svg/shareW.svg'
-import reloadIconW from '../static/svg/reloadW.svg'
 import shrinkW from '../static/svg/shrinkW.svg'
-import pinW from '../static/svg/pinW.svg'
-import discordIcon from '../static/svg/discord.svg'
-import facebookIcon from '../static/svg/facebook.svg'
-import internetIcon from '../static/svg/internet.svg'
-import linkedinIcon from '../static/svg/linkedin.svg'
-import slackIcon from '../static/svg/slack.svg'
-import whatsappIcon from '../static/svg/whatsapp.svg'
-import trelloIcon from '../static/svg/trello.svg'
-import gitHubIcon from '../static/svg/gitHub.svg'
-import logoIcon from '../static/svg/logoW.svg'
+import discordIcon from '../static/svg/websites/discord.svg'
+import facebookIcon from '../static/svg/websites/facebook.svg'
+import internetIcon from '../static/svg/websites/internet.svg'
+import linkedinIcon from '../static/svg/websites/linkedin.svg'
+import slackIcon from '../static/svg/websites/slack.svg'
+import whatsappIcon from '../static/svg/websites/whatsapp.svg'
+import trelloIcon from '../static/svg/websites/trello.svg'
+import gitHubIcon from '../static/svg/websites/gitHub.svg'
+import logoIcon from '../static/svg/logo/logoW.svg'
 
 export const triggerAlert = (type, message, setAlert, resetAlert) => {
     // triggerAlert('warning', 'success: alert bar is working', props.setAlert, props.resetAlert)
@@ -113,13 +107,10 @@ export const palletteGenerator = (primaryColor) => {
             color,
             higherColor,
             userIcon: userIconW,
-            clockIcon: clockIconW,
             handshakeIcon: handshakeIconW,
             plusIcon: plusIconW,
             shareIcon: shareIconW,
-            reloadIcon: reloadIconW,
             shrinkIcon: shrinkW,
-            pinIcon: pinW,
             colored: {
                 heartIcon: <svg fill={color} viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>,
                 shareIcon: <svg fill={color} viewBox="0 -22 512 511" xmlns="http://www.w3.org/2000/svg"><path d="m512 233.820312-212.777344-233.320312v139.203125h-45.238281c-140.273437 0-253.984375 113.710937-253.984375 253.984375v73.769531l20.09375-22.019531c68.316406-74.851562 164.980469-117.5 266.324219-117.5h12.804687v139.203125zm0 0"/></svg>,
@@ -132,13 +123,10 @@ export const palletteGenerator = (primaryColor) => {
             color,
             higherColor,
             userIcon: userIconB,
-            clockIcon: clockIconB,
             handshakeIcon: handshakeIconB,
             plusIcon: plusIconB,
             shareIcon: shareIconB,
-            reloadIcon: reloadIconB,
             shrinkIcon: shrinkB,
-            pinIcon: pinB,
             colored: {
                 heartIcon: <svg fill={color} viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg"><path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/></svg>,
                 shareIcon: <svg fill={color} viewBox="0 -22 512 511" xmlns="http://www.w3.org/2000/svg"><path d="m512 233.820312-212.777344-233.320312v139.203125h-45.238281c-140.273437 0-253.984375 113.710937-253.984375 253.984375v73.769531l20.09375-22.019531c68.316406-74.851562 164.980469-117.5 266.324219-117.5h12.804687v139.203125zm0 0"/></svg>,

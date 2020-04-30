@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { websiteStats } from '../../hooks/index'
+import { websiteStats } from '../../functions/functions'
 
 const PostLinks = (props) => {
     const links = props.referenceLinks

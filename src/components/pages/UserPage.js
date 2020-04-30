@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useQuery, useMutation } from '@apollo/react-hooks'
-import { FIND_USER, MAKE_NOTIFICATION } from '../../schemas'
+import { MAKE_NOTIFICATION } from '../../schemas/mutations'
+import { FIND_USER } from '../../schemas/queries'
 import { setAlert, resetAlert } from '../../reducers/alertNotif'
-import '../../static/css/userPage.css'
+import '../../static/css/pages/userPage.css'
 import PostSmallList from '../post/PostSmallList'
 import Loading from '../Loading'
-import FormContainer from '../FormContainer'
+import FormContainer from '../text-field/FormContainer'
 import userIcon from '../../static/svg/userB.svg'
-import ReferenceLink from '../ReferenceLink'
-import { palletteGenerator, useField, triggerAlert } from '../../hooks/index'
+import ReferenceLink from '../text-field/ReferenceLink'
+import { palletteGenerator, useField, triggerAlert } from '../../functions/functions'
 
 const UserPage = (props) => {
     const [currentUser, setCurrentUser] = useState(null)
