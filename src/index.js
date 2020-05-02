@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { renderToString } from 'react-dom/server'
-import { HelmetProvider } from 'react-helmet-async'
 import App from './App';
 import { Provider } from 'react-redux'
 import store from './store'
@@ -37,9 +35,7 @@ const renderApp = () => {
             ReactDOM.render(
                 <ApolloProvider client={client}>
                     <Provider store={store}>
-                        <HelmetProvider>
-                            <App />
-                        </HelmetProvider>
+                        <App />
                     </Provider>
                 </ApolloProvider>,
                 document.getElementById('root')
