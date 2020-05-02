@@ -8,9 +8,10 @@ import { ApolloProvider } from "@apollo/react-hooks"
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { setContext } from 'apollo-link-context'
-// https://projectu-back-end-2020.herokuapp.com/graphql
-// https://cakecrusher-projectu-back-end.glitch.me/graphql
-// https://localhost:4000/graphql
+//    DEPLOYED https://projectu-back-end-2020.herokuapp.com/graphql
+// DEVELOPMENT https://unilous-back-end-dev.herokuapp.com/graphql
+//       LOCAL https://localhost:4000/graphql
+//   ALTERNATE https://cakecrusher-projectu-back-end.glitch.me/graphql
 const renderApp = () => {
     const httpLink = createHttpLink({
         uri: 'https://projectu-back-end-2020.herokuapp.com/graphql',
