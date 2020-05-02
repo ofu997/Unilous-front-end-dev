@@ -14,7 +14,7 @@ import { setContext } from 'apollo-link-context'
 //   ALTERNATE https://cakecrusher-projectu-back-end.glitch.me/graphql
 const renderApp = () => {
     const httpLink = createHttpLink({
-        uri: 'https://unilous-back-end-dev.herokuapp.com/graphql',
+        uri: 'https://projectu-back-end-2020.herokuapp.com/graphql',
     })
     
     const authLink = setContext((_, { headers }) => {
