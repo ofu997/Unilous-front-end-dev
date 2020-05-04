@@ -245,7 +245,6 @@ const PostPage = (props) => {
         if (props.home) {
             return (
                 <div className="home-options">
-		    <h1>Branching</h1>
                     <Link to="/browse/" className="home-option neutralize-link" style={{backgroundColor: '#282828'}}>
                         <img src={searchIcon} className="home-option-icon" alt="search" />
                         <h3 className="home-option-text">start browsing</h3>
