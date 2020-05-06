@@ -21,6 +21,7 @@ import UserSP from '../user/utilities/UserSP'
 import SignIn from '../user/form/SignIn'
 import Register from '../user/form/Register'
 import { clearToken } from '../../reducers/token'
+import { resetAlert } from '../../reducers/alertNotif'
 
 let NavBar = (props) => {
     const [utilityShown, setUtilityShown] = useState(null)
@@ -188,7 +189,7 @@ let NavBar = (props) => {
                     </div>
                     <UserContainer />
                 </div>
-                <div className="alert-bar-container" style={{backgroundColor: props.alertNotif.color, color: props.alertNotif.textColor}}>
+                <div onClick={() => props.resetAlert()} className="alert-bar-container" style={alertBarStyle}>
                     {props.alertNotif.message}
                 </div>
             </div>
@@ -206,7 +207,7 @@ let NavBar = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="alert-bar-container" style={alertBarStyle}>
+                <div onClick={() => props.resetAlert()} className="alert-bar-container" style={alertBarStyle}>
                     {props.alertNotif.message}
                 </div>
                 <div className="nav-bar-sub-container" style={showWhenSB}>
@@ -230,7 +231,6 @@ NavBar = withRouter(NavBar)
 
 const mapStateToProps = (state) => {
 	return {
-
         currentUser: state.currentUser,
         token: state.token,
         alertNotif: state.alertNotif
@@ -238,5 +238,5 @@ const mapStateToProps = (state) => {
 }
 export default connect(
     mapStateToProps,
-    { clearToken }
+    { clearToken, resetAlert }
 )(NavBar)
