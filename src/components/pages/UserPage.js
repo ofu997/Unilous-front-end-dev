@@ -20,7 +20,7 @@ const UserPage = (props) => {
       variables: {username: decodedUser}
     })
 
-    const currentUserUN = localStorage.getItem('username') ? localStorage.getItem('username') : 'fakeUser'
+    const currentUserUN = localStorage.getItem('username') ? localStorage.getItem('username') : 'fakeUser';
 
     const onError = (e) => {
       const eMessage = e.message
