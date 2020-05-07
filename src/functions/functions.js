@@ -24,15 +24,12 @@ export const triggerAlert = (type, message, setAlert, resetAlert) => {
     const cleanedMessage = <p style={{margin: 0}}><strong>{message.split('$:')[0]}</strong>: {message.split('$:')[1]}</p>
     if (type === 'success') {
         setAlert({color: 'rgb(52,166,95)', textColor: 'white', message: cleanedMessage})
-        setTimeout(() => resetAlert(), 3000)
     }
     if (type === 'warning') {
         setAlert({color: 'rgb(226,184,59)', textColor: 'white', message: cleanedMessage})
-        setTimeout(() => resetAlert(), 5000)
     }
     if (type === 'danger') {
         setAlert({color: 'rgb(254,52,77)', textColor: 'white', message: cleanedMessage})
-        setTimeout(() => resetAlert(), 3000)
     }
 }
 
