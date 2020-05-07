@@ -1,10 +1,10 @@
+import { useMutation } from '@apollo/react-hooks'
 import React from 'react'
 import { connect } from 'react-redux'
-import { useMutation } from '@apollo/react-hooks'
+import { triggerAlert, useField } from '../../../functions/functions'
+import { resetAlert, setAlert } from '../../../reducers/alertNotif'
 import { CREATE_USER } from '../../../schemas/mutations'
 import InputHeader from '../../text-field/InputHeader'
-import { useField, triggerAlert } from '../../../functions/functions'
-import { setAlert, resetAlert } from '../../../reducers/alertNotif'
 
 const Register = (props) => {
     const username = useField('text')
@@ -19,7 +19,7 @@ const Register = (props) => {
         console.log(e.message)
         if (cleanedMessage.includes('username')) cleanedMessage = `username$: ${username.fields.value} is already being used`
         if (cleanedMessage.includes('referenceLink')) cleanedMessage = `reference link$: ${referenceLink.fields.value} is already being used`
-        if (cleanedMessage.includes('email')) cleanedMessage = `email$: ${email.fields.value} is already being used`
+        // if (cleanedMessage.includes('email')) cleanedMessage = `email$: ${email.fields.value} is already being used`
         triggerAlert('warning', cleanedMessage, props.setAlert, props.resetAlert)
     }
 

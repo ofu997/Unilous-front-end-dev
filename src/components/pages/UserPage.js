@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import { useMutation, useQuery } from '@apollo/react-hooks'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { useQuery, useMutation } from '@apollo/react-hooks'
+import { palletteGenerator, triggerAlert, useField } from '../../functions/functions'
+import { resetAlert, setAlert } from '../../reducers/alertNotif'
 import { MAKE_NOTIFICATION } from '../../schemas/mutations'
 import { FIND_USER } from '../../schemas/queries'
-import { setAlert, resetAlert } from '../../reducers/alertNotif'
 import '../../static/css/pages/userPage.css'
-import PostSmallList from '../post/PostSmallList'
-import Loading from '../Loading'
-import FormContainer from '../text-field/FormContainer'
 import userIcon from '../../static/svg/userB.svg'
+import Loading from '../Loading'
+import PostSmallList from '../post/PostSmallList'
+import FormContainer from '../text-field/FormContainer'
 import ReferenceLink from '../text-field/ReferenceLink'
-import { palletteGenerator, useField, triggerAlert } from '../../functions/functions'
 
 const UserPage = (props) => {
     const [currentUser, setCurrentUser] = useState(null)
@@ -19,6 +19,9 @@ const UserPage = (props) => {
     const userQuery = useQuery(FIND_USER, {
       variables: {username: decodedUser}
     })
+
+    const currentUserUN = localStorage.getItem('username') ? localStorage.getItem('username') : 'fakeUser'
+
     const onError = (e) => {
       const eMessage = e.message
       if (eMessage.includes('Path `message` (')) {
@@ -70,6 +73,7 @@ const UserPage = (props) => {
       )
     }
     const pallette = palletteGenerator("rgb(40,40,40)").colorPallette
+    
     return (
         <div className="userPage-container">
           <div className="navbar-height" style={{gridColumn: '1/3'}} />
@@ -85,6 +89,7 @@ const UserPage = (props) => {
               <PostSmallList posts={currentUser.posts} />
             </div>
           </div>
+          {(currentUserUN !== currentUser.username) &&
             <FormContainer pallette={pallette} >
                   <h3 className="form-title">contact {currentUser.username}</h3>
                   <h4 className="form-title-secondary">message</h4>
@@ -95,7 +100,7 @@ const UserPage = (props) => {
                     
                   <h4 onClick={() => handleMessage()} className="form-submit-button">send</h4>
                   </div>
-            </FormContainer>
+            </FormContainer>}
         </div>
     )
 }
